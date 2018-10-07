@@ -1,0 +1,2633 @@
+# Japanese translations for Coq package.
+# Copyright (C) 1999-2018, Inria
+# This file is distributed under the same license as the Coq package.
+# Automatically generated, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Coq 8.8.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-07 10:53+0900\n"
+"PO-Revision-Date: 2018-10-07 10:53+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../practical-tools/coq-commands.rst:4
+msgid "The |Coq| commands"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:6
+msgid "There are three |Coq| commands:"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:8
+msgid "``coqtop``: the |Coq| toplevel (interactive mode);"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:9
+msgid "``coqc``: the |Coq| compiler (batch compilation);"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:10
+msgid "``coqchk``: the |Coq| checker (validation of compiled libraries)."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:13
+msgid ""
+"The options are (basically) the same for the first two commands, and roughly "
+"described below. You can also look at the ``man`` pages of ``coqtop`` and "
+"``coqc`` for more details."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:20
+msgid "Interactive use (coqtop)"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:22
+msgid ""
+"In the interactive mode, also known as the |Coq| toplevel, the user can "
+"develop his theories and proofs step by step. The |Coq| toplevel is run by "
+"the command ``coqtop``."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:26
+msgid ""
+"There are two different binary images of |Coq|: the byte-code one and the "
+"native-code one (if OCaml provides a native-code compiler for your platform, "
+"which is supposed in the following). By default, ``coqtop`` executes the "
+"native-code version; run ``coqtop.byte`` to get the byte-code version."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:32
+msgid ""
+"The byte-code toplevel is based on an OCaml toplevel (to allow dynamic "
+"linking of tactics). You can switch to the OCaml toplevel with the command "
+"``Drop.``, and come back to the |Coq| toplevel with the command ``Coqloop."
+"loop();;``."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:38
+msgid "Batch compilation (coqc)"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:40
+msgid ""
+"The ``coqc`` command takes a name *file* as argument. Then it looks for a "
+"vernacular file named *file*.v, and tries to compile it into a *file*.vo "
+"file (See :ref:`compiled-files`)."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:46
+msgid ""
+"The name *file* should be a regular |Coq| identifier as defined in Section :"
+"ref:`lexical-conventions`. It should contain only letters, digits or "
+"underscores (_). For example ``/bar/foo/toto.v`` is valid, but ``/bar/foo/to-"
+"to.v`` is not."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:52
+msgid "Customization at launch time"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:55
+msgid "By resource file"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:57
+msgid ""
+"When |Coq| is launched, with either ``coqtop`` or ``coqc``, the resource "
+"file ``$XDG_CONFIG_HOME/coq/coqrc.xxx``, if it exists, will be implicitly "
+"prepended to any document read by Coq, whether it is an interactive session "
+"or a file to compile. Here, ``$XDG_CONFIG_HOME`` is the configuration "
+"directory of the user (by default it's ``~/.config``) and ``xxx`` is the "
+"version number (e.g. 8.8). If this file is not found, then the file ``"
+"$XDG_CONFIG_HOME/coqrc`` is searched. If not found, it is the file ``~/."
+"coqrc.xxx`` which is searched, and, if still not found, the file ``~/."
+"coqrc``. If the latter is also absent, no resource file is loaded. You can "
+"also specify an arbitrary name for the resource file (see option ``-init-"
+"file`` below)."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:70
+msgid ""
+"The resource file may contain, for instance, ``Add LoadPath`` commands to "
+"add directories to the load path of |Coq|. It is possible to skip the "
+"loading of the resource file with the option ``-q``."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:77
+msgid "By environment variables"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:79
+msgid ""
+"Load path can be specified to the |Coq| system by setting up ``$COQPATH`` "
+"environment variable. It is a list of directories separated by ``:`` (``;`` "
+"on Windows). |Coq| will also honor ``$XDG_DATA_HOME`` and ``$XDG_DATA_DIRS`` "
+"(see Section :ref:`libraries-and-filesystem`)."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:84
+msgid ""
+"Some |Coq| commands call other |Coq| commands. In this case, they look for "
+"the commands in directory specified by ``$COQBIN``. If this variable is not "
+"set, they look for the commands in the executable path."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:88
+msgid ""
+"The ``$COQ_COLORS`` environment variable can be used to specify the set of "
+"colors used by ``coqtop`` to highlight its output. It uses the same syntax "
+"as the ``$LS_COLORS`` variable from GNU’s ls, that is, a colon-separated "
+"list of assignments of the form :n:`name={*; attr}` where ``name`` is the "
+"name of the corresponding highlight tag and each ``attr`` is an ANSI escape "
+"code. The list of highlight tags can be retrieved with the ``-list-tags`` "
+"command-line option of ``coqtop``."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:99
+msgid "By command line options"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:101
+msgid ""
+"The following command-line options are recognized by the commands ``coqc`` "
+"and ``coqtop``, unless stated otherwise:"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-I *directory*, -include *directory*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:104
+msgid "Add physical path *directory* to the OCaml loadpath."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:109
+msgid ""
+":ref:`names-of-libraries` and the command Declare ML Module Section :ref:"
+"`compiled-files`."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-Q *directory* dirpath"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:111
+msgid ""
+"Add physical path *directory* to the list of directories where |Coq| looks "
+"for a file and bind it to the logical directory *dirpath*. The subdirectory "
+"structure of *directory* is recursively available from |Coq| using absolute "
+"names (extending the dirpath prefix) (see Section :ref:`qualified-names`)."
+"Note that only those subdirectories and files which obey the lexical "
+"conventions of what is an :n:`@ident` are taken into account. Conversely, "
+"the underlying file systems or operating systems may be more restrictive "
+"than |Coq|. While Linux’s ext4 file system supports any |Coq| recursive "
+"layout (within the limit of 255 bytes per filename), the default on NTFS "
+"(Windows) or HFS+ (MacOS X) file systems is on the contrary to disallow two "
+"files differing only in the case in the same directory."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:124
+#: ../../practical-tools/coq-commands.rst:130
+msgid "Section :ref:`names-of-libraries`."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-R *directory* dirpath"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:125
+msgid ""
+"Do as -Q *directory* dirpath but make the subdirectory structure of "
+"*directory* recursively visible so that the recursive contents of physical "
+"*directory* is available from |Coq| using short or partially qualified names."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-top dirpath"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:131
+msgid ""
+"Set the toplevel module name to dirpath instead of Top. Not valid for `coqc` "
+"as the toplevel module name is inferred from the name of the output file."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-exclude-dir *directory*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:134
+msgid ""
+"Exclude any subdirectory named *directory* while processing options such as -"
+"R and -Q. By default, only the conventional version control management "
+"directories named CVS and_darcs are excluded."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-nois"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:138
+msgid "Start from an empty state instead of loading the Init.Prelude module."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-init-file *file*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:140
+msgid ""
+"Load *file* as the resource file instead of loading the default resource "
+"file from the standard configuration directories."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-q"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:143
+msgid "Do not to load the default resource file."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-load-ml-source *file*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:144
+msgid "Load the OCaml source file *file*."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-load-ml-object *file*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:145
+msgid "Load the OCaml object file *file*."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-l *file*, -load-vernac-source *file*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:146
+msgid "Load and execute the |Coq| script from *file.v*."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-lv *file*, -load-vernac-source-verbose *file*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:148
+msgid ""
+"Load and execute the |Coq| script from *file.v*. Write its contents to the "
+"standard output as it is executed."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-load-vernac-object dirpath"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:151
+msgid ""
+"Load |Coq| compiled library dirpath. This is equivalent to runningRequire "
+"dirpath."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-require dirpath"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:153
+msgid ""
+"Load |Coq| compiled library dirpath and import it. This is equivalent to "
+"running Require Import dirpath."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-batch"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:155
+msgid "Exit just after argument parsing. Available for `coqtop` only."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-compile *file.v*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:156
+msgid ""
+"Compile file *file.v* into *file.vo*. This option implies -batch (exit just "
+"after argument parsing). It is available only for `coqtop`, as this behavior "
+"is the purpose of `coqc`."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-compile-verbose *file.v*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:159
+msgid ""
+"Same as -compile but also output the content of *file.v* as it is compiled."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-verbose"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:161
+msgid ""
+"Output the content of the input file as it is compiled. This option is "
+"available for `coqc` only; it is the counterpart of -compile-verbose."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-w (all|none|w₁,…,wₙ)"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:164
+msgid ""
+"Configure the display of warnings. This option expects all, none or a comma-"
+"separated list of warning names or categories (see Section :ref:`controlling-"
+"display`)."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-color (on|off|auto)"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:167
+msgid ""
+"Enable or not the coloring of output of `coqtop`. Default is auto, meaning "
+"that `coqtop` dynamically decides, depending on whether the output channel "
+"supports ANSI escape sequences."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-beautify"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:170
+msgid ""
+"Pretty-print each command to *file.beautified* when compiling *file.v*, in "
+"order to get old-fashioned syntax/definitions/notations."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-emacs, -ide-slave"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:173
+msgid "Start a special toplevel to communicate with a specific IDE."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-impredicative-set"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:175
+msgid ""
+"Change the logical theory of |Coq| by declaring the sort Set impredicative."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:180
+msgid ""
+"This is known to be inconsistent with some standard axioms of classical "
+"mathematics such as the functional axiom of choice or the principle of "
+"description."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-type-in-type"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:183
+msgid "Collapse the universe hierarchy of |Coq|."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:185
+msgid "This makes the logic inconsistent."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-mangle-names *ident*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:186
+msgid ""
+"Experimental: Do not depend on this option. Replace Coq's auto-generated "
+"name scheme with names of the form *ident0*, *ident1*, etc. The command "
+"``Set Mangle Names`` turns the behavior on in a document, and ``Set Mangle "
+"Names Prefix \"ident\"`` changes the used prefix. This feature is intended "
+"to be used as a linter for developments that want to be robust to changes in "
+"the auto-generated name scheme. The options are provided to facilitate "
+"tracking down problems."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-compat *version*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:193
+msgid ""
+"Attempt to maintain some backward-compatibility with a previous version."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-dump-glob *file*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:195
+msgid ""
+"Dump references for global names in file *file* (to be used by coqdoc, see :"
+"ref:`coqdoc`). By default, if *file.v* is being compiled, *file.glob* is "
+"used."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-no-glob"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:198
+msgid "Disable the dumping of references for global names."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-image *file*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:199
+msgid ""
+"Set the binary image to be used by `coqc` to be *file* instead of the "
+"standard one. Not of general use."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-bindir *directory*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:201
+msgid ""
+"Set the directory containing |Coq| binaries to be used by `coqc`. It is "
+"equivalent to doing export COQBIN= *directory* before launching `coqc`."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-where"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:204
+msgid "Print the location of |Coq|’s standard library and exit."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-config"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:205
+msgid ""
+"Print the locations of |Coq|’s binaries, dependencies, and libraries, then "
+"exit."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-filteropts"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:207
+msgid ""
+"Print the list of command line arguments that `coqtop` has recognized as "
+"options and exit."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-v"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:209
+msgid "Print |Coq|’s version and exit."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-list-tags"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:210
+msgid ""
+"Print the highlight tags known by |Coq| as well as their currently "
+"associated color and exit."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+#: ../../practical-tools/utilities.rst:0
+msgid "-h, --help"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:212
+msgid "Print a short usage and exit."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:215
+msgid "Compiled libraries checker (coqchk)"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:217
+msgid ""
+"The ``coqchk`` command takes a list of library paths as argument, described "
+"either by their logical name or by their physical filename, hich must end in "
+"``.vo``. The corresponding compiled libraries (``.vo`` files) are searched "
+"in the path, recursively processing the libraries they depend on. The "
+"content of all these libraries is then type checked. The effect of "
+"``coqchk`` is only to return with normal exit code in case of success, and "
+"with positive exit code if an error has been found. Error messages are not "
+"deemed to help the user understand what is wrong. In the current version, it "
+"does not modify the compiled libraries to mark them as successfully checked."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:227
+msgid ""
+"Note that non-logical information is not checked. By logical information, we "
+"mean the type and optional body associated to names. It excludes for "
+"instance anything related to the concrete syntax of objects (customized "
+"syntax rules, association between short and long names), implicit arguments, "
+"etc."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:233
+msgid ""
+"This tool can be used for several purposes. One is to check that a compiled "
+"library provided by a third-party has not been forged and that loading it "
+"cannot introduce inconsistencies [#]_. Another point is to get an even "
+"higher level of security. Since ``coqtop`` can be extended with custom "
+"tactics, possibly ill-typed code, it cannot be guaranteed that the produced "
+"compiled libraries are correct. ``coqchk`` is a standalone verifier, and "
+"thus it cannot be tainted by such malicious code."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:242
+msgid ""
+"Command-line options ``-Q``, ``-R``, ``-where`` and ``-impredicative-set`` "
+"are supported by ``coqchk`` and have the same meaning as for ``coqtop``. As "
+"there is no notion of relative paths in object files ``-Q`` and ``-R`` have "
+"exactly the same meaning."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-norec *module*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:246
+msgid "Check *module* but do not check its dependencies."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-admit *module*"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:247
+msgid ""
+"Do not check *module* and any of its dependencies, unless explicitly "
+"required."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-o"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:249
+msgid ""
+"At exit, print a summary about the context. List the names of all "
+"assumptions and variables (constants without body)."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:0
+msgid "-silent"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:251
+msgid "Do not write progress information to the standard output."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:253
+msgid ""
+"Environment variable ``$COQLIB`` can be set to override the location of the "
+"standard library."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:256
+msgid ""
+"The algorithm for deciding which modules are checked or admitted is the "
+"following: assuming that ``coqchk`` is called with argument ``M``, option ``-"
+"norec N``, and ``-admit A``. Let us write :math:`\\overline{S}` for the set "
+"of reflexive transitive dependencies of set :math:`S`. Then:"
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:261
+msgid ""
+"Modules :math:`C = \\overline{M} \\backslash \\overline{A} \\cup M \\cup N` "
+"are loaded and type checked before being added to the context."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:263
+msgid ""
+"And :math:`M \\cup N \\backslash C` is the set of modules that are loaded "
+"and added to the context without type checking. Basic integrity checks "
+"(checksums) are nonetheless performed."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:267
+msgid ""
+"As a rule of thumb, -admit can be used to tell Coq that some libraries have "
+"already been checked. So ``coqchk A B`` can be split in ``coqchk A`` && "
+"``coqchk B -admit A`` without type checking any definition twice. Of course, "
+"the latter is slightly slower since it makes more disk access. It is also "
+"less secure since an attacker might have replaced the compiled library ``A`` "
+"after it has been read by the first command, but before it has been read by "
+"the second command."
+msgstr ""
+
+#: ../../practical-tools/coq-commands.rst:275
+msgid ""
+"Ill-formed non-logical information might for instance bind Coq.Init.Logic."
+"True to short name False, so apparently False is inhabited, but using fully "
+"qualified names, Coq.Init.Logic.False will always refer to the absurd "
+"proposition, what we guarantee is that there is no proof of this latter "
+"constant."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:4
+msgid "|Coq| Integrated Development Environment"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:6
+msgid ""
+"The Coq Integrated Development Environment is a graphical tool, to be used "
+"as a user-friendly replacement to `coqtop`. Its main purpose is to allow the "
+"user to navigate forward and backward into a Coq vernacular file, executing "
+"corresponding commands or undoing them respectively."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:11
+msgid ""
+"|CoqIDE| is run by typing the command `coqide` on the command line. Without "
+"argument, the main screen is displayed with an “unnamed buffer”, and with a "
+"filename as argument, another buffer displaying the contents of that file. "
+"Additionally, `coqide` accepts the same options as `coqtop`, given in :ref:"
+"`thecoqcommands`, the ones having obviously no meaning for |CoqIDE| being "
+"ignored."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:23
+msgid ""
+"A sample |CoqIDE| main screen, while navigating into a file `Fermat.v`, is "
+"shown in the figure :ref:`CoqIDE main screen <coqide_mainscreen>`. At the "
+"top is a menu bar, and a tool bar below it. The large window on the left is "
+"displaying the various *script buffers*. The upper right window is the *goal "
+"window*, where goals to be proven are displayed. The lower right window is "
+"the *message window*, where various messages resulting from commands are "
+"displayed. At the bottom is the status bar."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:33
+msgid "Managing files and buffers, basic editing"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:35
+msgid ""
+"In the script window, you may open arbitrarily many buffers to edit. The "
+"*File* menu allows you to open files or create some, save them, print or "
+"export them into various formats. Among all these buffers, there is always "
+"one which is the current *running buffer*, whose name is displayed on a "
+"background in the *processed* color (green by default), which is the one "
+"where Coq commands are currently executed."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:42
+msgid ""
+"Buffers may be edited as in any text editor, and classical basic editing "
+"commands (Copy/Paste, …) are available in the *Edit* menu. |CoqIDE| offers "
+"only basic editing commands, so if you need more complex editing commands, "
+"you may launch your favorite text editor on the current buffer, using the "
+"*Edit/External Editor* menu."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:49
+msgid "Interactive navigation into Coq scripts"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:51
+msgid ""
+"The running buffer is the one where navigation takes place. The toolbar "
+"offers five basic commands for this. The first one, represented by a down "
+"arrow icon, is for going forward executing one command. If that command is "
+"successful, the part of the script that has been executed is displayed on a "
+"background with the processed color. If that command fails, the error "
+"message is displayed in the message window, and the location of the error is "
+"emphasized by an underline in the error foreground color (red by default)."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:59
+msgid ""
+"In the figure :ref:`CoqIDE main screen <coqide_mainscreen>`, the running "
+"buffer is `Fermat.v`, all commands until the ``Theorem`` have been already "
+"executed, and the user tried to go forward executing ``Induction n``. That "
+"command failed because no such tactic exists (names of standard tactics are "
+"written in lowercase), and the failing command is underlined."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:66
+msgid ""
+"Notice that the processed part of the running buffer is not editable. If you "
+"ever want to modify something you have to go backward using the up arrow "
+"tool, or even better, put the cursor where you want to go back and use the "
+"goto button. Unlike with `coqtop`, you should never use ``Undo`` to go "
+"backward."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:72
+msgid ""
+"There are two additional buttons for navigation within the running buffer. "
+"The \"down\" button with a line goes directly to the end; the \"up\" button "
+"with a line goes back to the beginning. The handling of errors when using "
+"the go-to-the-end button depends on whether |Coq| is running in asynchronous "
+"mode or not (see Chapter :ref:`asynchronousandparallelproofprocessing`). If "
+"it is not running in that mode, execution stops as soon as an error is "
+"found. Otherwise, execution continues, and the error is marked with an "
+"underline in the error foreground color, with a background in the error "
+"background color (pink by default). The same characterization of error-"
+"handling applies when running several commands using the \"goto\" button."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:83
+msgid ""
+"If you ever try to execute a command that runs for a long time and would "
+"like to abort it before it terminates, you may use the interrupt button (the "
+"white cross on a red circle)."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:87
+msgid ""
+"There are other buttons on the |CoqIDE| toolbar: a button to save the "
+"running buffer; a button to close the current buffer (an \"X\"); buttons to "
+"switch among buffers (left and right arrows); an \"information\" button; and "
+"a \"gears\" button."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:91
+msgid ""
+"The \"information\" button is described in Section :ref:`try-tactics-"
+"automatically`."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:93
+msgid ""
+"The \"gears\" button submits proof terms to the |Coq| kernel for type "
+"checking. When |Coq| uses asynchronous processing (see Chapter :ref:"
+"`asynchronousandparallelproofprocessing`), proofs may have been completed "
+"without kernel-checking of generated proof terms. The presence of unchecked "
+"proof terms is indicated by ``Qed`` statements that have a subdued *being-"
+"processed* color (light blue by default), rather than the processed color, "
+"though their preceding proofs have the processed color."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:100
+msgid ""
+"Notice that for all these buttons, except for the \"gears\" button, their "
+"operations are also available in the menu, where their keyboard shortcuts "
+"are given."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:106
+msgid "Trying tactics automatically"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:108
+msgid ""
+"The menu Try Tactics provides some features for automatically trying to "
+"solve the current goal using simple tactics. If such a tactic succeeds in "
+"solving the goal, then its text is automatically inserted into the script. "
+"There is finally a combination of these tactics, called the *proof wizard* "
+"which will try each of them in turn. This wizard is also available as a tool "
+"button (the \"information\" button). The set of tactics tried by the wizard "
+"is customizable in the preferences."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:116
+msgid ""
+"These tactics are general ones, in particular they do not refer to "
+"particular hypotheses. You may also try specific tactics related to the goal "
+"or one of the hypotheses, by clicking with the right mouse button on the "
+"goal or the considered hypothesis. This is the “contextual menu on goals” "
+"feature, that may be disabled in the preferences if undesirable."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:125
+msgid "Proof folding"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:127
+msgid ""
+"As your script grows bigger and bigger, it might be useful to hide the "
+"proofs of your theorems and lemmas."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:130
+msgid ""
+"This feature is toggled via the Hide entry of the Navigation menu. The proof "
+"shall be enclosed between ``Proof.`` and ``Qed.``, both with their final "
+"dots. The proof that shall be hidden or revealed is the first one whose "
+"beginning statement (such as ``Theorem``) precedes the insertion cursor."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:138
+msgid "Vernacular commands, templates"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:140
+msgid ""
+"The Templates menu allows using shortcuts to insert vernacular commands. "
+"This is a nice way to proceed if you are not sure of the syntax of the "
+"command you want."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:144
+msgid ""
+"Moreover, from this menu you can automatically insert templates of complex "
+"commands like ``Fixpoint`` that you can conveniently fill afterwards."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:148
+msgid "Queries"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:153
+msgid ""
+"We call *query* any vernacular command that does not change the current "
+"state, such as ``Check``, ``Search``, etc. To run such commands "
+"interactively, without writing them in scripts, |CoqIDE| offers a *query "
+"pane*. The query pane can be displayed on demand by using the ``View`` menu, "
+"or using the shortcut ``F1``. Queries can also be performed by selecting a "
+"particular phrase, then choosing an item from the ``Queries`` menu. The "
+"response then appears in the message window. The image above shows the "
+"result after selecting of the phrase ``Nat.mul`` in the script window, and "
+"choosing ``Print`` from the ``Queries`` menu."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:165
+msgid "Compilation"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:167
+msgid "The `Compile` menu offers direct commands to:"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:169
+msgid "compile the current buffer"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:170
+msgid "run a compilation using `make`"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:171
+msgid "go to the last compilation error"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:172
+msgid "create a `Makefile` using `coq_makefile`."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:175
+msgid "Customizations"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:177
+msgid ""
+"You may customize your environment using the menu Edit/Preferences. A new "
+"window will be displayed, with several customization sections presented as a "
+"notebook."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:181
+msgid ""
+"The first section is for selecting the text font used for scripts, goal and "
+"message windows."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:184
+msgid ""
+"The second section is devoted to file management: you may configure "
+"automatic saving of files, by periodically saving the contents into files "
+"named `#f#` for each opened file `f`. You may also activate the *revert* "
+"feature: in case a opened file is modified on the disk by a third party, |"
+"CoqIDE| may read it again for you. Note that in the case you edited that "
+"same file, you will be prompted to choose to either discard your changes or "
+"not. The File charset encoding choice is described below in :ref:`character-"
+"encoding-saved-files`."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:193
+msgid ""
+"The `Externals` section allows customizing the external commands for "
+"compilation, printing, web browsing. In the browser command, you may use `"
+"%s` to denote the URL to open, for example: `firefox -remote "
+"\"OpenURL(%s)\"`."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:198
+msgid ""
+"The `Tactics Wizard` section allows defining the set of tactics that should "
+"be tried, in sequence, to solve the current goal."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:201
+msgid ""
+"The last section is for miscellaneous boolean settings, such as the "
+"“contextual menu on goals” feature presented in the section :ref:`Try "
+"tactics automatically <try-tactics-automatically>`."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:205
+msgid ""
+"Notice that these settings are saved in the file `.coqiderc` of your home "
+"directory."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:208
+msgid ""
+"A Gtk2 accelerator keymap is saved under the name `.coqide.keys`. It is not "
+"recommended to edit this file manually: to modify a given menu shortcut, go "
+"to the corresponding menu item without releasing the mouse button, press the "
+"key you want for the new shortcut, and release the mouse button afterwards. "
+"If your system does not allow it, you may still edit this configuration file "
+"by hand, but this is more involved."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:217
+msgid "Using Unicode symbols"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:219
+msgid ""
+"|CoqIDE| is based on GTK+ and inherits from it support for Unicode in its "
+"text windows. Consequently a large set of symbols is available for notations."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:225
+msgid "Displaying Unicode symbols"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:227
+msgid ""
+"You just need to define suitable notations as described in the chapter :ref:"
+"`syntaxextensionsandinterpretationscopes`. For example, to use the "
+"mathematical symbols ∀ and ∃, you may define:"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:238
+msgid ""
+"There exists a small set of such notations already defined, in the file "
+"`utf8.v` of Coq library, so you may enable them just by ``Require Import "
+"Unicode.Utf8`` inside |CoqIDE|, or equivalently, by starting |CoqIDE| with "
+"``coqide -l utf8``."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:243
+msgid ""
+"However, there are some issues when using such Unicode symbols: you of "
+"course need to use a character font which supports them. In the Fonts "
+"section of the preferences, the Preview line displays some Unicode symbols, "
+"so you could figure out if the selected font is OK. Related to this, one "
+"thing you may need to do is choosing whether GTK+ should use antialiased "
+"fonts or not, by setting the environment variable `GDK_USE_XFT` to 1 or 0 "
+"respectively."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:253
+msgid "Defining an input method for non-ASCII symbols"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:255
+msgid ""
+"To input a Unicode symbol, a general method provided by GTK+ is to "
+"simultaneously press the Control, Shift and “u” keys, release, then type the "
+"hexadecimal code of the symbol required, for example `2200` for the ∀ "
+"symbol. A list of symbol codes is available at `http://www.unicode.org`."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:261
+msgid ""
+"An alternative method which does not require to know the hexadecimal code of "
+"the character is to use an Input Method Editor. On POSIX systems (Linux "
+"distributions, BSD variants and MacOS X), you can use `uim` version 1.6 or "
+"later which provides a LaTeX-style input method."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:267
+msgid ""
+"To configure uim, execute uim-pref-gtk as your regular user. In the \"Global "
+"Settings\" group set the default Input Method to \"ELatin\" (don’t forget to "
+"tick the checkbox \"Specify default IM\"). In the \"ELatin\" group set the "
+"layout to \"TeX\", and remember the content of the \"[ELatin] on\" field (by "
+"default Control-\\\\). You can now execute |CoqIDE| with the following "
+"commands (assuming you use a Bourne-style shell):"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:281
+msgid ""
+"Activate the ELatin Input Method with Control-\\\\, then type the sequence `"
+"\\\\Gamma`. You will see the sequence being replaced by Γ as soon as you "
+"type the second \"a\"."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:288
+msgid "Character encoding for saved files"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:290
+msgid ""
+"In the Files section of the preferences, the encoding option is related to "
+"the way files are saved."
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:293
+msgid ""
+"If you have no need to exchange files with non UTF-8 aware applications, it "
+"is better to choose the UTF-8 encoding, since it guarantees that your files "
+"will be read again without problems. (This is because when |CoqIDE| reads a "
+"file, it tries to automatically detect its character encoding.)"
+msgstr ""
+
+#: ../../practical-tools/coqide.rst:299
+msgid ""
+"If you choose something else than UTF-8, then missing characters will be "
+"written encoded by `\\x{....}` or `\\x{........}` where each dot is an "
+"hexadecimal digit: the number between braces is the hexadecimal Unicode "
+"index for the missing character."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:5
+msgid "Utilities"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:7
+msgid ""
+"The distribution provides utilities to simplify some tedious works beside "
+"proof development, tactics writing or documentation."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:12
+msgid "Using Coq as a library"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:14
+msgid ""
+"In previous versions, ``coqmktop`` was used to build custom toplevels - for "
+"example for better debugging or custom static linking. Nowadays, the "
+"preferred method is to use ``ocamlfind``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:18
+msgid "The most basic custom toplevel is built using:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:27
+msgid "For example, to statically link |L_tac|, you can just do:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:35
+msgid "and similarly for other plugins."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:39
+msgid "Building a |Coq| project with coq_makefile"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:41
+msgid ""
+"The majority of |Coq| projects are very similar: a collection of ``.v`` "
+"files and eventually some ``.ml`` ones (a |Coq| plugin). The main piece of "
+"metadata needed in order to build the project are the command line options "
+"to ``coqc`` (e.g. ``-R``, ``-I``, see also: section :ref:`command-line-"
+"options`). Collecting the list of files and options is the job of the "
+"``_CoqProject`` file."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:48
+msgid "A simple example of a ``_CoqProject`` file follows:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:61
+msgid ""
+"Currently, both |CoqIDE| and Proof-General (version ≥ ``4.3pre``) understand "
+"``_CoqProject`` files and invoke |Coq| with the desired options."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:64
+msgid ""
+"The ``coq_makefile`` utility can be used to set up a build infrastructure "
+"for the |Coq| project based on makefiles. The recommended way of invoking "
+"``coq_makefile`` is the following one:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:73
+msgid "Such command generates the following files:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:79
+msgid "CoqMakefile"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:76
+msgid ""
+"is a generic makefile for ``GNU Make`` that provides targets to build the "
+"project (both ``.v`` and ``.ml*`` files), to install it system-wide in the "
+"``coq-contrib`` directory (i.e. where |Coq| is installed) as well as to "
+"invoke coqdoc to generate HTML documentation."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:85
+msgid "CoqMakefile.conf"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:82
+msgid ""
+"contains make variables assignments that reflect the contents of the "
+"``_CoqProject`` file as well as the path relevant to |Coq|."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:87
+msgid ""
+"An optional file ``CoqMakefile.local`` can be provided by the user in order "
+"to extend ``CoqMakefile``. In particular one can declare custom actions to "
+"be performed before or after the build process. Similarly one can customize "
+"the install target or even provide new targets. Extension points are "
+"documented in paragraph :ref:`coqmakefilelocal`."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:93
+msgid ""
+"The extensions of the files listed in ``_CoqProject`` is used in order to "
+"decide how to build them. In particular:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:97
+msgid "|Coq| files must use the ``.v`` extension"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:98
+msgid "|OCaml| files must use the ``.ml`` or ``.mli`` extension"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:99
+msgid ""
+"|OCaml| files that require pre processing for syntax extensions (like "
+"``VERNAC EXTEND``) must use the ``.ml4`` extension"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:101
+msgid ""
+"In order to generate a plugin one has to list all |OCaml| modules (i.e. "
+"``Baz`` for ``baz.ml``) in a ``.mlpack`` file (or ``.mllib`` file)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:106
+msgid ""
+"The use of ``.mlpack`` files has to be preferred over ``.mllib`` files, "
+"since it results in a “packed” plugin: All auxiliary modules (as ``Baz`` and "
+"``Bazaux``) are hidden inside the plugin’s \"namespace\" (``Qux_plugin``). "
+"This reduces the chances of begin unable to load two distinct plugins "
+"because of a clash in their auxiliary module names."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:115
+msgid "CoqMakefile.local"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:117
+msgid ""
+"The optional file ``CoqMakefile.local`` is included by the generated file "
+"``CoqMakefile``. It can contain two kinds of directives."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:120
+msgid "**Variable assignment**"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:122
+msgid ""
+"The variable must belong to the variables listed in the ``Parameters`` "
+"section of the generated makefile. Here we describe only few of them."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "CAMLPKGS"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:127
+msgid ""
+"can be used to specify third party findlib packages, and is passed to the "
+"OCaml compiler on building or linking of modules. Eg: ``-package yojson``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "CAMLFLAGS"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:131
+msgid ""
+"can be used to specify additional flags to the |OCaml| compiler, like ``-bin-"
+"annot`` or ``-w``...."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "COQC, COQDEP, COQDOC"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:134
+msgid "can be set in order to use alternative binaries (e.g. wrappers)"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "COQ_SRC_SUBDIRS"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:137
+msgid ""
+"can be extended by including other paths in which ``*.cm*`` files are "
+"searched. For example ``COQ_SRC_SUBDIRS+=user-contrib/Unicoq`` lets you "
+"build a plugin containing OCaml code that depends on the OCaml code of "
+"``Unicoq``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:142
+msgid "**Rule extension**"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:144
+msgid "The following makefile rules can be extended."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:146
+#: ../../practical-tools/utilities.rst:206
+#: ../../practical-tools/utilities.rst:236
+#: ../../practical-tools/utilities.rst:283
+#: ../../practical-tools/utilities.rst:307
+#: ../../practical-tools/utilities.rst:337
+#: ../../practical-tools/utilities.rst:380
+#: ../../practical-tools/utilities.rst:571
+#: ../../practical-tools/utilities.rst:591
+#: ../../practical-tools/utilities.rst:653
+msgid "Example"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:157
+msgid "``pre-all::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:156
+msgid ""
+"run before the ``all`` target. One can use this to configure the project, or "
+"initialize sub modules or check dependencies are met."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:161
+msgid "``post-all::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:160
+msgid ""
+"run after the ``all`` target. One can use this to run a test suite, or "
+"compile extracted code."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:164
+msgid "``install-extra::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:164
+msgid "run after ``install``. One can use this to install extra files."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:167
+msgid "``install-doc::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:167
+msgid "One can use this to install extra doc."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:170
+msgid "``uninstall::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:170
+#: ../../practical-tools/utilities.rst:173
+#: ../../practical-tools/utilities.rst:176
+#: ../../practical-tools/utilities.rst:179
+#: ../../practical-tools/utilities.rst:182
+msgid "\\"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:173
+msgid "``uninstall-doc::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:176
+msgid "``clean::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:179
+msgid "``cleanall::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:182
+msgid "``archclean::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:186
+msgid "``merlin-hook::``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:185
+msgid ""
+"One can append lines to the generated ``.merlin`` file extending this target."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:189
+msgid "Timing targets and performance testing"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:191
+msgid ""
+"The generated ``Makefile`` supports the generation of two kinds of timing "
+"data: per-file build-times, and per-line times for an individual file."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:194
+msgid ""
+"The following targets and Makefile variables allow collection of per- file "
+"timing data:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:218
+msgid "``TIMED=1``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:199
+msgid ""
+"passing this variable will cause ``make`` to emit a line describing the user-"
+"space build-time and peak memory usage for each file built."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:204
+msgid "On ``Mac OS``, this works best if you’ve installed ``gnu-time``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:208
+msgid "For example, the output of ``make TIMED=1`` may look like this:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:254
+msgid "``pretty-timed``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:221
+msgid ""
+"this target stores the output of ``make TIMED=1`` into ``time-of-build."
+"log``, and displays a table of the times, sorted from slowest to fastest, "
+"which is also stored in ``time-of-build-pretty.log``. If you want to "
+"construct the ``log`` for targets other than the default one, you can pass "
+"them via the variable ``TGTS``, e.g., ``make pretty-timed TGTS=\"a.vo b.vo"
+"\"``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:232
+msgid ""
+"This target will *append* to the timing log; if you want a fresh start, you "
+"must remove the ``filetime-of-build.log`` or ``run make cleanall``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:238
+msgid "For example, the output of ``make pretty-timed`` may look like this:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:296
+msgid "``print-pretty-timed-diff``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:257
+msgid ""
+"this target builds a table of timing changes between two compilations; run "
+"``make make-pretty-timed-before`` to build the log of the “before” times, "
+"and run ``make make-pretty-timed-after`` to build the log of the “after” "
+"times. The table is printed on the command line, and stored in ``time-of-"
+"build-both.log``. This target is most useful for profiling the difference "
+"between two commits in a repository."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:265
+msgid "This target requires ``python`` to build the table."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:268
+msgid ""
+"The ``make-pretty-timed-before`` and ``make-pretty-timed-after`` targets "
+"will *append* to the timing log; if you want a fresh start, you must remove "
+"the files ``time-of-build-before.log`` and ``time-of-build-after.log`` or "
+"run ``make cleanall`` *before* building either the “before” or “after” "
+"targets."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:275
+msgid ""
+"The table will be sorted first by absolute time differences rounded towards "
+"zero to a whole-number of seconds, then by times in the “after” column, and "
+"finally lexicographically by file name. This will put the biggest changes in "
+"either direction first, and will prefer sorting by build-time over subsecond "
+"changes in build time (which are frequently noise); lexicographic sorting "
+"forces an order on files which take effectively no time to compile."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:285
+msgid ""
+"For example, the output table from ``make print-pretty-timed-diff`` may look "
+"like this:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:298
+msgid ""
+"The following targets and ``Makefile`` variables allow collection of per- "
+"line timing data:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:316
+msgid "``TIMING=1``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:303
+msgid ""
+"passing this variable will cause ``make`` to use ``coqc -time`` to write to "
+"a ``.v.timing`` file for each ``.v`` file compiled, which contains line-by-"
+"line timing information."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:309
+msgid ""
+"For example, running ``make all TIMING=1`` may result in a file like this:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:318
+msgid "``print-pretty-single-time-diff``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:324
+msgid ""
+"this target will make a sorted table of the per-line timing differences "
+"between the timing logs in the ``BEFORE`` and ``AFTER`` files, display it, "
+"and save it to the file specified by the ``TIME_OF_PRETTY_BUILD_FILE`` "
+"variable, which defaults to ``time-of-build-pretty.log``. To generate the ``."
+"v.before-timing`` or ``.v.after-timing`` files, you should pass  "
+"``TIMING=before`` or ``TIMING=after`` rather than ``TIMING=1``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:332
+msgid ""
+"The sorting used here is the same as in the ``print-pretty-timed -diff`` "
+"target."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:335
+#: ../../practical-tools/utilities.rst:365
+msgid "This target requires python to build the table."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:339
+msgid ""
+"For example, running  ``print-pretty-single-time-diff`` might give a table "
+"like this:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:366
+msgid "``all.timing.diff``, ``path/to/file.v.timing.diff``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:355
+msgid ""
+"The ``path/to/file.v.timing.diff`` target will make a ``.v.timing.diff`` "
+"file for the corresponding ``.v`` file, with a table as would be generated "
+"by the ``print-pretty-single-time-diff`` target; it depends on having "
+"already made the corresponding ``.v.before-timing`` and ``.v.after-timing`` "
+"files, which can be made by passing ``TIMING=before`` and ``TIMING=after``. "
+"The  ``all.timing.diff`` target will make such timing difference files for "
+"all of the ``.v`` files that the ``Makefile`` knows about. It will fail if "
+"some ``.v.before-timing`` or ``.v.after-timing`` files don’t exist."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:369
+msgid "Reusing/extending the generated Makefile"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:371
+msgid ""
+"Including the generated makefile with an include directive is discouraged. "
+"The contents of this file, including variable names and status of rules "
+"shall change in the future. Users are advised to include ``Makefile.conf`` "
+"or call a target of the generated Makefile as in ``make -f Makefile target`` "
+"from another Makefile."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:377
+msgid ""
+"One way to get access to all targets of the generated ``CoqMakefile`` is to "
+"have a generic target for invoking unknown targets."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:413
+msgid "Building a subset of the targets with ``-j``"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:415
+msgid ""
+"To build, say, two targets foo.vo and bar.vo in parallel one can use ``make "
+"only TGTS=\"foo.vo bar.vo\" -j``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:420
+msgid ""
+"``make foo.vo bar.vo -j`` has a different meaning for the make utility, in "
+"particular it may build a shared prerequisite twice."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:426
+msgid "For users of coq_makefile with version < 8.7"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:428
+msgid ""
+"Support for \"subdirectory\" is deprecated. To perform actions before or "
+"after the build (like invoking ``make`` on a subdirectory) one can hook in "
+"pre-all and post-all extension points."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:431
+msgid ""
+"``-extra-phony`` and ``-extra`` are deprecated. To provide additional target "
+"(``.PHONY`` or not) please use ``CoqMakefile.local``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:437
+msgid "Module dependencies"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:439
+msgid ""
+"In order to compute module dependencies (so to use ``make``), |Coq| comes "
+"with an appropriate tool, ``coqdep``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:442
+msgid ""
+"``coqdep`` computes inter-module dependencies for |Coq| and |OCaml| "
+"programs, and prints the dependencies on the standard output in a format "
+"readable by make. When a directory is given as argument, it is recursively "
+"looked at."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:447
+msgid ""
+"Dependencies of |Coq| modules are computed by looking at ``Require`` "
+"commands (``Require``, ``Require Export``, ``Require Import``), but also at "
+"the command ``Declare ML Module``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:451
+msgid ""
+"Dependencies of |OCaml| modules are computed by looking at `open` commands "
+"and the dot notation *module.value*. However, this is done approximately and "
+"you are advised to use ``ocamldep`` instead for the |OCaml| module "
+"dependencies."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:456
+msgid "See the man page of ``coqdep`` for more details and options."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:458
+msgid ""
+"The build infrastructure generated by ``coq_makefile`` uses ``coqdep`` to "
+"automatically compute the dependencies among the files part of the project."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:466
+msgid "Documenting |Coq| files with coqdoc"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:468
+msgid ""
+"coqdoc is a documentation tool for the proof assistant |Coq|, similar to "
+"``javadoc`` or ``ocamldoc``. The task of coqdoc is"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:472
+msgid ""
+"to produce a nice |Latex| and/or HTML document from |Coq| source files, "
+"readable for a human and not only for the proof assistant;"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:474
+msgid "to help the user navigate his own (or third-party) sources."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:479
+msgid "Principles"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:481
+msgid ""
+"Documentation is inserted into |Coq| files as *special comments*. Thus your "
+"files will compile as usual, whether you use coqdoc or not. coqdoc "
+"presupposes that the given |Coq| files are well-formed (at least lexically). "
+"Documentation starts with ``(**``, followed by a space, and ends with "
+"``*)``. The documentation format is inspired by Todd A. Coram’s *Almost Free "
+"Text (AFT)* tool: it is mainly ``ASCII`` text with some syntax-light "
+"controls, described below. coqdoc is robust: it shouldn’t fail, whatever the "
+"input is. But remember: “garbage in, garbage out”."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:493
+msgid "|Coq| material inside documentation."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:495
+msgid ""
+"|Coq| material is quoted between the delimiters ``[`` and ``]``. Square "
+"brackets may be nested, the inner ones being understood as being part of the "
+"quoted code (thus you can quote a term like ``fun x => u`` by writing  "
+"``[fun x => u]``). Inside quotations, the code is pretty-printed in the same "
+"way as it is in code parts."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:501
+msgid ""
+"Preformatted vernacular is enclosed by ``[[`` and ``]]``. The former must be "
+"followed by a newline and the latter must follow a newline."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:506
+msgid "Pretty-printing."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:508
+msgid ""
+"coqdoc uses different faces for identifiers and keywords. The pretty- "
+"printing of |Coq| tokens (identifiers or symbols) can be controlled using "
+"one of the following commands:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:518
+msgid "or"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:526
+msgid ""
+"It gives the |Latex| and HTML texts to be produced for the given |Coq| "
+"token. Either the |Latex| or the HTML rule may be omitted, causing the "
+"default pretty-printing to be used for this token."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:530
+msgid "The printing for one token can be removed with"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:538
+msgid "Initially, the pretty-printing table contains the following mapping:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:541
+msgid "`->`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:541
+msgid "→"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:541
+msgid "`<-`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:541
+msgid "←"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:541
+msgid "`*`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:541
+msgid "×"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:542
+msgid "`<=`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:542
+msgid "≤"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:542
+msgid "`>=`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:542
+msgid "≥"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:542
+msgid "`=>`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:542
+msgid "⇒"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:543
+msgid "`<>`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:543
+msgid "≠"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:543
+msgid "`<->`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:543
+msgid "↔"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:543
+msgid "`|-`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:543
+msgid "⊢"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:544
+msgid "`\\\\/`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:544
+msgid "∨"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:544
+msgid "`/\\\\`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:544
+msgid "∧"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:544
+msgid "`~`"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:544
+msgid "¬"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:547
+msgid ""
+"Any of these can be overwritten or suppressed using the printing commands."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:552
+msgid ""
+"The recognition of tokens is done by a (``ocaml``) lex automaton and thus "
+"applies the longest-match rule. For instance, `->~` is recognized as a "
+"single token, where |Coq| sees two tokens. It is the responsibility of the "
+"user to insert space between tokens *or* to give pretty-printing rules for "
+"the possible combinations, e.g."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:565
+msgid "Sections"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:567
+msgid ""
+"Sections are introduced by 1 to 4 asterisks at the beginning of a line "
+"followed by a space and the title of the section. One asterisk is a section, "
+"two a subsection, etc."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:581
+msgid "Lists."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:583
+msgid ""
+"List items are introduced by a leading dash. coqdoc uses whitespace to "
+"determine the depth of a new list item and which text belongs in which list "
+"items. A list ends when a line of text starts at or before the level of "
+"indenting of the list’s dash. A list item’s dash must always be the first "
+"non-space character on its line (so, in particular, a list can not begin on "
+"the first line of a comment - start it on the second line instead)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:609
+msgid "Rules."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:611
+msgid "More than 4 leading dashes produce a horizontal rule."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:615
+msgid "Emphasis."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:617
+msgid ""
+"Text can be italicized by enclosing it in underscores. A non-identifier "
+"character must precede the leading underscore and follow the trailing "
+"underscore, so that uses of underscores in names aren’t mistaken for "
+"emphasis. Usually, these are spaces or punctuation."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:629
+msgid "Escaping to |Latex| and HTML."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:631
+msgid ""
+"Pure |Latex| or HTML material can be inserted using the following escape "
+"sequences:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:635
+msgid ""
+"``$...LATEX stuff...$`` inserts some |Latex| material in math mode. Simply "
+"discarded in HTML output."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:637
+msgid ""
+"``%...LATEX stuff...%`` inserts some |Latex| material. Simply discarded in "
+"HTML output."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:639
+msgid ""
+"``#...HTML stuff...#`` inserts some HTML material. Simply discarded in |"
+"Latex| output."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:643
+msgid ""
+"to simply output the characters ``$``, ``%`` and ``#`` and escaping their "
+"escaping role, these characters must be doubled."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:648
+msgid "Verbatim"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:650
+msgid ""
+"Verbatim material is introduced by a leading ``<<`` and closed by ``>>`` at "
+"the beginning of a line."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:666
+msgid "Hyperlinks"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:668
+msgid ""
+"Hyperlinks can be inserted into the HTML output, so that any identifier is "
+"linked to the place of its definition."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:671
+msgid ""
+"``coqc file.v`` automatically dumps localization information in ``file."
+"glob`` or appends it to a file specified using the option ``--dump-glob "
+"file``. Take care of erasing this global file, if any, when starting the "
+"whole compilation process."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:676
+msgid ""
+"Then invoke coqdoc or ``coqdoc --glob-from file`` to tell coqdoc to look for "
+"name resolutions in the file ``file`` (it will look in ``file.glob`` by "
+"default)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:680
+msgid ""
+"Identifiers from the |Coq| standard library are linked to the Coq website "
+"`<http://coq.inria.fr/library/>`_. This behavior can be changed using "
+"command line options ``--no-externals`` and ``--coqlib``; see below."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:686
+msgid "Hiding / Showing parts of the source."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:688
+msgid ""
+"Some parts of the source can be hidden using command line options ``-g`` and "
+"``-l`` (see below), or using such comments:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:699
+msgid ""
+"Conversely, some parts of the source which would be hidden can be shown "
+"using such comments:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:710
+msgid ""
+"The latter cannot be used around some inner parts of a proof, but can be "
+"used around a whole proof."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:715
+msgid "Usage"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:717
+msgid ""
+"coqdoc is invoked on a shell command line as follows: ``coqdoc <options and "
+"files>``. Any command line argument which is not an option is considered to "
+"be a file (even if it starts with a ``-``). |Coq| files are identified by "
+"the suffixes ``.v`` and ``.g`` and |Latex| files by the suffix ``.tex``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "HTML output"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:724
+msgid ""
+"This is the default output format. One HTML file is created for each |Coq| "
+"file given on the command line, together with a file ``index.html`` (unless "
+"``option-no-index is passed``). The HTML pages use a style sheet named "
+"``style.css``. Such a file is distributed with coqdoc."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "|Latex| output"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:728
+msgid ""
+"A single |Latex| file is created, on standard output. It can be redirected "
+"to a file using the option ``-o``. The order of files on the command line is "
+"kept in the final document. |Latex| files given on the command line are "
+"copied ‘as is’ in the final document . DVI and PostScript can be produced "
+"directly with the options ``-dvi`` and ``-ps`` respectively."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "TEXmacs output"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:734
+msgid ""
+"To translate the input files to TEXmacs format, to be used by the TEXmacs |"
+"Coq| interface."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:740
+msgid "Command line options"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:743
+msgid "**Overall options**"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--HTML"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:746
+msgid "Select a HTML output."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--|Latex|"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:747
+msgid "Select a |Latex| output."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--dvi"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:748
+msgid "Select a DVI output."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--ps"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:749
+msgid "Select a PostScript output."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--texmacs"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:750
+msgid "Select a TEXmacs output."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--stdout"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:751
+msgid "Write output to stdout."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-o file, --output file"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:752
+msgid "Redirect the output into the file ‘file’ (meaningless with ``-html``)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-d dir, --directory dir"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:754
+msgid ""
+"Output files into directory ‘dir’ instead of the current directory (option "
+"``-d`` does not change the filename specified with the option ``-o``, if "
+"any)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--body-only"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:757
+msgid ""
+"Suppress the header and trailer of the final document. Thus, you can insert "
+"the resulting document into a larger one."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-p string, --preamble string"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:759
+msgid ""
+"Insert some material in the |Latex| preamble, right before ``"
+"\\begin{document}`` (meaningless with ``-html``)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--vernac-file file,--tex-file file"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:761
+msgid ""
+"Considers the file ‘file’ respectively as a ``.v`` (or ``.g``) file or a ``."
+"tex`` file."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--files-from file"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:763
+msgid ""
+"Read filenames to be processed from the file ‘file’ as if they were given on "
+"the command line. Useful for program sources split up into several "
+"directories."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-q, --quiet"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:766
+msgid "Be quiet. Do not print anything except errors."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:767
+msgid "Give a short summary of the options and exit."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-v, --version"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:768
+msgid "Print the version and exit."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:772
+msgid "**Index options**"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:774
+msgid ""
+"The default behavior is to build an index, for the HTML output only, into "
+"``index.html``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--no-index"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:777
+msgid "Do not output the index."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--multi-index"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:778
+msgid ""
+"Generate one page for each category and each letter in the index, together "
+"with a top page ``index.html``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--index string"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:780
+msgid ""
+"Make the filename of the index string instead of “index”. Useful since "
+"“index.html” is special."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:785
+msgid "**Table of contents option**"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-toc, --table-of-contents"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:787
+msgid ""
+"Insert a table of contents. For a |Latex| output, it inserts a ``"
+"\\tableofcontents`` at the beginning of the document. For a HTML output, it "
+"builds a table of contents into ``toc.html``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--toc-depth int"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:791
+msgid "Only include headers up to depth ``int`` in the table of contents."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:795
+msgid "**Hyperlink options**"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--glob-from file"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:797
+msgid ""
+"Make references using |Coq| globalizations from file file. (Such "
+"globalizations are obtained with Coq option ``-dump-glob``)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--no-externals"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:799
+msgid "Do not insert links to the |Coq| standard library."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--external url coqdir"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:800
+msgid ""
+"Use given URL for linking references whose name starts with prefix "
+"``coqdir``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--coqlib url"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:802
+msgid ""
+"Set base URL for the Coq standard library (default is `<http://coq.inria.fr/"
+"library/>`_). This is equivalent to ``--external url Coq``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-R dir coqdir"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:805
+msgid ""
+"Map physical directory dir to |Coq| logical directory  ``coqdir`` (similarly "
+"to |Coq| option ``-R``)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:810
+msgid ""
+"option ``-R`` only has effect on the files *following* it on the command "
+"line, so you will probably need to put this option first."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:815
+msgid "**Title options**"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-s , --short"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:817
+msgid ""
+"Do not insert titles for the files. The default behavior is to insert a "
+"title like “Library Foo” for each file."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--lib-name string"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:819
+msgid ""
+"Print “string Foo” instead of “Library Foo” in titles. For example “Chapter” "
+"and “Module” are reasonable choices."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--no-lib-name"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:821
+msgid "Print just “Foo” instead of “Library Foo” in titles."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--lib-subtitles"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:822
+msgid ""
+"Look for library subtitles. When enabled, the beginning of each file is "
+"checked for a comment of the form:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:829
+msgid ""
+"where ``ModuleName`` must be the name of the file. If it is present, the "
+"text is used as a subtitle for the module in appropriate places."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-t string, --title string"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:831
+msgid "Set the document title."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:834
+msgid "**Contents options**"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-g, --gallina"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:836
+msgid "Do not print proofs."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-l, --light"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:837
+msgid ""
+"Light mode. Suppress proofs (as with ``-g``) and the following commands:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:839
+msgid "[Recursive] Tactic Definition"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:840
+msgid "Hint / Hints"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:841
+msgid "Require"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:842
+msgid "Transparent / Opaque"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:843
+msgid "Implicit Argument / Implicits"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:844
+msgid "Section / Variable / Hypothesis / End"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:848
+msgid ""
+"The behavior of options ``-g`` and ``-l`` can be locally overridden using "
+"the ``(* begin show *) … (* end show *)`` environment (see above)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:851
+msgid "There are a few options that control the parsing of comments:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--parse-comments"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:853
+msgid ""
+"Parse regular comments delimited by ``(*`` and ``*)`` as well. They are "
+"typeset inline."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--plain-comments"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:855
+msgid "Do not interpret comments, simply copy them as plain-text."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--interpolate"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:857
+msgid ""
+"Use the globalization information to typeset identifiers appearing in |Coq| "
+"escapings inside comments."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:860
+msgid "**Language options**"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:863
+msgid "The default behavior is to assume ASCII 7 bit input files."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-latin1, --latin1"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:865
+msgid ""
+"Select ISO-8859-1 input files. It is equivalent to --inputenc latin1 --"
+"charset iso-8859-1."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "-utf8, --utf8"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:867
+msgid ""
+"Set --inputenc utf8x for |Latex| output and--charset utf-8 for HTML output. "
+"Also use Unicode replacements for a couple of standard plain ASCII notations "
+"such as → for ``->`` and ∀ for ``forall``. |Latex| UTF-8 support can be "
+"found at `<http://www.ctan.org/pkg/unicode>`_. For the interpretation of "
+"Unicode characters by |Latex|, extra packages which coqdoc does not provide "
+"by default might be required, such as textgreek for some Greek letters or "
+"``stmaryrd`` for some mathematical symbols. If a Unicode character is "
+"missing an interpretation in the utf8x input encoding, add ``"
+"\\DeclareUnicodeCharacter{code}{LATEX-interpretation}``. Packages and "
+"declarations can be added with option ``-p``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--inputenc string"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:878
+msgid ""
+"Give a |Latex| input encoding, as an option to |Latex| package ``inputenc``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "--charset string"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:880
+msgid "Specify the HTML character set, to be inserted in the HTML header."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:886
+msgid "The coqdoc |Latex| style file"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:888
+msgid ""
+"In case you choose to produce a document without the default |Latex| "
+"preamble (by using option ``--no-preamble``), then you must insert into your "
+"own preamble the command"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:896
+msgid ""
+"The package optionally takes the argument ``[color]`` to typeset identifiers "
+"with colors (this requires the ``xcolor`` package)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:899
+msgid ""
+"Then you may alter the rendering of the document by redefining some macros:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "coqdockw, coqdocid, …"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:902
+msgid ""
+"The one-argument macros for typesetting keywords and identifiers. Defaults "
+"are sans-serif for keywords and italic for identifiers.For example, if you "
+"would like a slanted font for keywords, you may insert"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:912
+msgid "anywhere between ``\\usepackage{coqdoc}`` and ``\\begin{document}``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:0
+msgid "coqdocmodule"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:916
+msgid ""
+"One-argument macro for typesetting the title of a ``.v`` file. Default is"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:923
+msgid "and you may redefine it using ``\\renewcommand``."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:926
+msgid "Embedded Coq phrases inside |Latex| documents"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:928
+msgid ""
+"When writing documentation about a proof development, one may want to insert "
+"|Coq| phrases inside a |Latex| document, possibly together with the "
+"corresponding answers of the system. We provide a mechanical way to process "
+"such |Coq| phrases embedded in |Latex| files: the ``coq-tex`` filter. This "
+"filter extracts |Coq| phrases embedded in |Latex| files, evaluates them, and "
+"insert the outcome of the evaluation after each phrase."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:936
+msgid ""
+"Starting with a file ``file.tex`` containing |Coq| phrases, the ``coq-tex`` "
+"filter produces a file named ``file.v.tex`` with the Coq outcome."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:939
+msgid ""
+"There are options to produce the |Coq| parts in smaller font, italic, "
+"between horizontal rules, etc. See the man page of ``coq-tex`` for more "
+"details."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:944
+msgid "|Coq| and GNU Emacs"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:948
+msgid "The |Coq| Emacs mode"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:950
+msgid ""
+"|Coq| comes with a Major mode for GNU Emacs, ``gallina.el``. This mode "
+"provides syntax highlighting and also a rudimentary indentation facility in "
+"the style of the ``Caml`` GNU Emacs mode."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:954
+msgid "Add the following lines to your ``.emacs`` file:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:962
+msgid ""
+"The |Coq| major mode is triggered by visiting a file with extension ``.v``, "
+"or manually with the command ``M-x coq-mode``. It gives you the correct "
+"syntax table for the |Coq| language, and also a rudimentary indentation "
+"facility:"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:968
+msgid ""
+"pressing ``Tab`` at the beginning of a line indents the line like the line "
+"above;"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:970
+msgid ""
+"extra tabulations increase the indentation level (by 2 spaces by default);"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:971
+msgid "``M-Tab`` decreases the indentation level."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:974
+msgid ""
+"An inferior mode to run |Coq| under Emacs, by Marco Maggesi, is also "
+"included in the distribution, in file ``inferior-coq.el``. Instructions to "
+"use it are contained in this file."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:980
+msgid "Proof-General"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:982
+msgid ""
+"Proof-General is a generic interface for proof assistants based on Emacs. "
+"The main idea is that the |Coq| commands you are editing are sent to a |Coq| "
+"toplevel running behind Emacs and the answers of the system automatically "
+"inserted into other Emacs buffers. Thus you don’t need to copy-paste the |"
+"Coq| material from your files to the |Coq| toplevel or conversely from the |"
+"Coq| toplevel to some files."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:989
+msgid ""
+"Proof-General is developed and distributed independently of the system |"
+"Coq|. It is freely available at `<https://proofgeneral.github.io/>`_."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:994
+msgid "Module specification"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:996
+msgid ""
+"Given a |Coq| vernacular file, the gallina filter extracts its specification "
+"(inductive types declarations, definitions, type of lemmas and theorems), "
+"removing the proofs parts of the file. The |Coq| file ``file.v`` gives birth "
+"to the specification file ``file.g`` (where the suffix ``.g`` stands for |"
+"Gallina|)."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:1002
+msgid "See the man page of ``gallina`` for more details and options."
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:1006
+msgid "Man pages"
+msgstr ""
+
+#: ../../practical-tools/utilities.rst:1008
+msgid ""
+"There are man pages for the commands ``coqdep``, ``gallina`` and ``coq-"
+"tex``. Man pages are installed at installation time (see installation "
+"instructions in file ``INSTALL``, step 6)."
+msgstr ""

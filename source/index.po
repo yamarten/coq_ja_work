@@ -1,0 +1,241 @@
+# Japanese translations for Coq package.
+# Copyright (C) 1999-2018, Inria
+# This file is distributed under the same license as the Coq package.
+# Automatically generated, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Coq 8.8.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-07 10:53+0900\n"
+"PO-Revision-Date: 2018-10-07 10:53+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../index.rst:5
+msgid "Introduction"
+msgstr ""
+
+#: ../../introduction.rst:1
+msgid ""
+"This document is the Reference Manual of the |Coq| proof assistant. To start "
+"using Coq, it is advised to first read a tutorial. Links to several "
+"tutorials can be found at https://coq.inria.fr/documentation and https://"
+"github.com/coq/coq/wiki#coq-tutorials"
+msgstr ""
+
+#: ../../introduction.rst:7
+msgid ""
+"The |Coq| system is designed to develop mathematical proofs, and especially "
+"to write formal specifications, programs and to verify that programs are "
+"correct with respect to their specifications. It provides a specification "
+"language named |Gallina|. Terms of |Gallina| can represent programs as well "
+"as properties of these programs and proofs of these properties. Using the so-"
+"called *Curry-Howard isomorphism*, programs, properties and proofs are "
+"formalized in the same language called *Calculus of Inductive "
+"Constructions*, that is a :math:`\\lambda`-calculus with a rich type system. "
+"All logical judgments in |Coq| are typing judgments. The very heart of the |"
+"Coq| system is the type checking algorithm that checks the correctness of "
+"proofs, in other words that checks that a program complies to its "
+"specification. |Coq| also provides an interactive proof assistant to build "
+"proofs using specific programs called *tactics*."
+msgstr ""
+
+#: ../../introduction.rst:22
+msgid ""
+"All services of the |Coq| proof assistant are accessible by interpretation "
+"of a command language called *the vernacular*."
+msgstr ""
+
+#: ../../introduction.rst:25
+msgid ""
+"Coq has an interactive mode in which commands are interpreted as the user "
+"types them in from the keyboard and a compiled mode where commands are "
+"processed from a file."
+msgstr ""
+
+#: ../../introduction.rst:29
+msgid ""
+"In interactive mode, users can develop their theories and proofs step by "
+"step, and query the system for available theorems and definitions. The "
+"interactive mode is generally run with the help of an IDE, such as CoqIDE, "
+"documented in :ref:`coqintegrateddevelopmentenvironment`, Emacs with Proof-"
+"General :cite:`Asp00` [#PG]_, or jsCoq to run Coq in your browser (see "
+"https://github.com/ejgallego/jscoq). The `coqtop` read-eval-print-loop can "
+"also be used directly, for debugging purposes."
+msgstr ""
+
+#: ../../introduction.rst:38
+msgid ""
+"The compiled mode acts as a proof checker taking a file containing a whole "
+"development in order to ensure its correctness. Moreover, |Coq|’s compiler "
+"provides an output file containing a compact representation of its input. "
+"The compiled mode is run with the `coqc` command."
+msgstr ""
+
+#: ../../introduction.rst:44
+msgid ":ref:`thecoqcommands`."
+msgstr ""
+
+#: ../../introduction.rst:47
+msgid "How to read this book"
+msgstr ""
+
+#: ../../introduction.rst:49
+msgid ""
+"This is a Reference Manual, so it is not intended for continuous reading. We "
+"recommend using the various indexes to quickly locate the documentation you "
+"are looking for. There is a global index, and a number of specific indexes "
+"for tactics, vernacular commands, and error messages and warnings. "
+"Nonetheless, the manual has some structure that is explained below."
+msgstr ""
+
+#: ../../introduction.rst:55
+msgid ""
+"The first part describes the specification language, |Gallina|. Chapters :"
+"ref:`gallinaspecificationlanguage` and :ref:`extensionsofgallina` describe "
+"the concrete syntax as well as the meaning of programs, theorems and proofs "
+"in the Calculus of Inductive Constructions. Chapter :ref:`thecoqlibrary` "
+"describes the standard library of |Coq|. Chapter :ref:"
+"`calculusofinductiveconstructions` is a mathematical description of the "
+"formalism. Chapter :ref:`themodulesystem` describes the module system."
+msgstr ""
+
+#: ../../introduction.rst:63
+msgid ""
+"The second part describes the proof engine. It is divided in six chapters. "
+"Chapter :ref:`vernacularcommands` presents all commands (we call them "
+"*vernacular commands*) that are not directly related to interactive proving: "
+"requests to the environment, complete or partial evaluation, loading and "
+"compiling files. How to start and stop proofs, do multiple proofs in "
+"parallel is explained in Chapter :ref:`proofhandling`. In Chapter :ref:"
+"`tactics`, all commands that realize one or more steps of the proof are "
+"presented: we call them *tactics*. The language to combine these tactics "
+"into complex proof strategies is given in Chapter :ref:`ltac`. Examples of "
+"tactics are described in Chapter :ref:`detailedexamplesoftactics`. Finally, "
+"the |SSR| proof language is presented in Chapter :ref:"
+"`thessreflectprooflanguage`."
+msgstr ""
+
+#: ../../introduction.rst:77
+msgid ""
+"The third part describes how to extend the syntax of |Coq| in Chapter :ref:"
+"`syntaxextensionsandinterpretationscopes` and how to define new induction "
+"principles in Chapter :ref:`proofschemes`."
+msgstr ""
+
+#: ../../introduction.rst:81
+msgid ""
+"In the fourth part more practical tools are documented. First in Chapter :"
+"ref:`thecoqcommands`, the usage of `coqc` (batch mode) and `coqtop` "
+"(interactive mode) with their options is described. Then, in Chapter :ref:"
+"`utilities`, various utilities that come with the |Coq| distribution are "
+"presented. Finally, Chapter :ref:`coqintegrateddevelopmentenvironment` "
+"describes CoqIDE."
+msgstr ""
+
+#: ../../introduction.rst:88
+msgid ""
+"The fifth part documents a number of advanced features, including coercions, "
+"canonical structures, typeclasses, program extraction, and specialized "
+"solvers and tactics. See the table of contents for a complete list."
+msgstr ""
+
+#: ../../introduction.rst:93
+msgid "List of additional documentation"
+msgstr ""
+
+#: ../../introduction.rst:95
+msgid ""
+"This manual does not contain all the documentation the user may need about |"
+"Coq|. Various informations can be found in the following documents:"
+msgstr ""
+
+#: ../../introduction.rst:103
+msgid "Tutorial"
+msgstr ""
+
+#: ../../introduction.rst:99
+msgid ""
+"A companion volume to this reference manual, the |Coq| Tutorial, is aimed at "
+"gently introducing new users to developing proofs in |Coq| without assuming "
+"prior knowledge of type theory. In a second step, the user can read also the "
+"tutorial on recursive types (document `RecTutorial.ps`)."
+msgstr ""
+
+#: ../../introduction.rst:107
+msgid "Installation"
+msgstr ""
+
+#: ../../introduction.rst:106
+msgid ""
+"A text file `INSTALL` that comes with the sources explains how to install |"
+"Coq|."
+msgstr ""
+
+#: ../../introduction.rst:112
+msgid "The |Coq| standard library"
+msgstr ""
+
+#: ../../introduction.rst:110
+msgid ""
+"A commented version of sources of the |Coq| standard library (including only "
+"the specifications, the proofs are removed) is available at https://coq."
+"inria.fr/stdlib/."
+msgstr ""
+
+#: ../../index.rst:10
+msgid "Table of contents"
+msgstr ""
+
+#: ../../index.rst:12
+msgid "Indexes"
+msgstr ""
+
+#: ../../index.rst:24
+msgid "Preamble"
+msgstr ""
+
+#: ../../index.rst:30
+msgid "The language"
+msgstr ""
+
+#: ../../index.rst:39
+msgid "The proof engine"
+msgstr ""
+
+#: ../../index.rst:49
+msgid "User extensions"
+msgstr ""
+
+#: ../../index.rst:55
+msgid "Practical tools"
+msgstr ""
+
+#: ../../index.rst:62
+msgid "Addendum"
+msgstr ""
+
+#: ../../index.rst:86
+msgid "License"
+msgstr ""
+
+#: ../../license.rst:1
+msgid ""
+"This material (the Coq Reference Manual) may be distributed only subject to "
+"the terms and conditions set forth in the Open Publication License, v1.0 or "
+"later (the latest version is presently available at http://www.opencontent."
+"org/openpub). Options A and B are not elected."
+msgstr ""
+
+#: ../../index.rst:90
+msgid ""
+"Proof-General is available at https://proofgeneral.github.io/. Optionally, "
+"you can enhance it with the minor mode Company-Coq :cite:`Pit16` (see "
+"https://github.com/cpitclaudel/company-coq)."
+msgstr ""

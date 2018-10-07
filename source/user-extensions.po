@@ -1,0 +1,1860 @@
+# Japanese translations for Coq package.
+# Copyright (C) 1999-2018, Inria
+# This file is distributed under the same license as the Coq package.
+# Automatically generated, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Coq 8.8.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-07 10:53+0900\n"
+"PO-Revision-Date: 2018-10-07 10:53+0900\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../user-extensions/proof-schemes.rst:4
+msgid "Proof schemes"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:9
+msgid "Generation of induction principles with ``Scheme``"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:11
+msgid ""
+"The ``Scheme`` command is a high-level tool for generating automatically "
+"(possibly mutual) induction principles for given types and sorts. Its syntax "
+"follows the schema:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:17
+msgid ""
+"where each `ident'ᵢ` is a different inductive type identifier belonging to "
+"the same package of mutual inductive definitions. This command generates the "
+"`identᵢ`s to be mutually recursive definitions. Each term `identᵢ` proves a "
+"general principle of mutual induction for objects in type `identᵢ`."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:25
+msgid ""
+"Same as before but defines a non-dependent elimination principle more "
+"natural in case of inductively defined relations."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:31
+msgid ""
+"Tries to generate a Boolean equality and a proof of the decidability of the "
+"usual equality. If `ident` involves some other inductive types, their "
+"equality has to be defined first."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:36
+msgid ""
+"If you do not provide the name of the schemes, they will be automatically "
+"computed from the sorts involved (works also with Minimality)."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:39
+#: ../../user-extensions/proof-schemes.rst:73
+#: ../../user-extensions/proof-schemes.rst:151
+#: ../../user-extensions/proof-schemes.rst:199
+#: ../../user-extensions/proof-schemes.rst:258
+#: ../../user-extensions/proof-schemes.rst:346
+msgid "Example"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:41
+msgid "Induction scheme for tree and forest."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:43
+msgid ""
+"A mutual induction principle for tree and forest in sort ``Set`` can be "
+"defined using the command"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:60
+msgid "You may now look at the type of tree_forest_rec:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:66
+msgid ""
+"This principle involves two different predicates for trees andforests; it "
+"also has three premises each one corresponding to a constructor of one of "
+"the inductive definitions."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:70
+msgid ""
+"The principle `forest_tree_rec` shares exactly the same premises, only the "
+"conclusion now refers to the property of forests."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:75
+msgid "Predicates odd and even on naturals."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:77
+msgid "Let odd and even be inductively defined as:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:86
+msgid "The following command generates a powerful elimination principle:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:93
+msgid "The type of odd_even for instance will be:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:99
+msgid ""
+"The type of `even_odd` shares the same premises but the conclusion is `(n:"
+"nat)(even n)->(P0 n)`."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:104
+msgid "Automatic declaration of schemes"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:108
+msgid ""
+"Enables automatic declaration of induction principles when defining a new "
+"inductive type.  Defaults to on."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:113
+msgid ""
+"Enables automatic declaration of induction principles for types declared "
+"with the :cmd:`Variant` and :cmd:`Record` commands.  Defaults to off."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:118
+msgid ""
+"This flag governs the generation of case analysis lemmas for inductive "
+"types, i.e. corresponding to the pattern matching term alone and without "
+"fixpoint."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:124
+msgid ""
+"These flags control the automatic declaration of those Boolean equalities "
+"(see the second variant of ``Scheme``)."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:129
+msgid ""
+"You have to be careful with this option since Coq may now reject well-"
+"defined inductive types because it cannot compute a Boolean equality for "
+"them."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:134
+msgid ""
+"This flag governs generation of equality-related schemes such as congruence."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:137
+msgid "Combined Scheme"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:139
+msgid ""
+"The ``Combined Scheme`` command is a tool for combining induction principles "
+"generated by the ``Scheme command``. Its syntax follows the schema :"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:145
+msgid ""
+"where each identᵢ after the ``from`` is a different inductive principle that "
+"must belong to the same package of mutual inductive principle definitions. "
+"This command generates the leftmost `ident` to be the conjunction of the "
+"principles: it is built from the common premises of the principles and "
+"concluded by the conjunction of their conclusions."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:153
+msgid "We can define the induction principles for trees and forests using:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:160
+msgid ""
+"Then we can build the combined induction principle which gives the "
+"conjunction of the conclusions of each individual principle:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:167
+msgid "The type of tree_forest_mutrec will be:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:176
+msgid "Generation of induction principles with ``Functional`` ``Scheme``"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:178
+msgid ""
+"The ``Functional Scheme`` command is a high-level experimental tool for "
+"generating automatically induction principles corresponding to (possibly "
+"mutually recursive) functions. First, it must be made available via "
+"``Require Import FunInd``. Its syntax then follows the schema:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:186
+msgid ""
+"where each `ident'ᵢ` is a different mutually defined function name (the "
+"names must be in the same order as when they were defined). This command "
+"generates the induction principle for each `identᵢ`, following the recursive "
+"structure and case analyses of the corresponding function identᵢ’."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:194
+msgid ""
+"There is a difference between induction schemes generated by the command :"
+"cmd:`Functional Scheme` and these generated by the :cmd:`Function`. Indeed, :"
+"cmd:`Function` generally produces smaller principles that are closer to how "
+"a user would implement them. See :ref:`advanced-recursive-functions` for "
+"details."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:201
+msgid "Induction scheme for div2."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:203
+msgid "We define the function div2 as follows:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:217
+msgid ""
+"The definition of a principle of induction corresponding to the recursive "
+"structure of `div2` is defined by the command:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:224
+msgid "You may now look at the type of div2_ind:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:230
+msgid "We can now prove the following lemma using this principle:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:243
+msgid ""
+"We can use directly the functional induction (:tacn:`function induction`) "
+"tactic instead of the pattern/apply trick:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:260
+msgid "Induction scheme for tree_size."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:262
+msgid "We define trees by the following mutual inductive type:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:276
+msgid ""
+"We define the function tree_size that computes the size of a tree or a "
+"forest. Note that we use ``Function`` which generally produces better "
+"principles."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:294
+msgid ""
+"Notice that the induction principles ``tree_size_ind`` and "
+"``forest_size_ind`` generated by ``Function`` are not mutual."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:301
+msgid ""
+"Mutual induction principles following the recursive structure of "
+"``tree_size`` and ``forest_size`` can be generated by the following command:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:309
+msgid "You may now look at the type of `tree_size_ind2`:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:318
+msgid "Generation of inversion principles with ``Derive`` ``Inversion``"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:320
+msgid "The syntax of ``Derive`` ``Inversion`` follows the schema:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:324
+msgid ""
+"This command generates an inversion principle for the `inversion … using` "
+"tactic. Let `I` be an inductive predicate and `x` the variables occurring in "
+"t. This command generates and stocks the inversion lemma for the sort `sort` "
+"corresponding to the instance `∀ (x:T), I t` with the name `ident` in the "
+"global environment. When applied, it is equivalent to having inverted the "
+"instance with the tactic `inversion`."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:333
+msgid ""
+"When applied, it is equivalent to having inverted the instance with the "
+"tactic inversion replaced by the tactic `inversion_clear`."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:338
+msgid ""
+"When applied, it is equivalent to having inverted the instance with the "
+"tactic `dependent inversion`."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:343
+msgid ""
+"When applied, it is equivalent to having inverted the instance with the "
+"tactic `dependent inversion_clear`."
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:348
+msgid ""
+"Consider the relation `Le` over natural numbers and the following parameter "
+"``P``:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:359
+msgid ""
+"To generate the inversion lemma for the instance `(Le (S n) m)` and the sort "
+"`Prop`, we do:"
+msgstr ""
+
+#: ../../user-extensions/proof-schemes.rst:367
+msgid "Then we can use the proven inversion lemma:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:4
+msgid "Syntax extensions and interpretation scopes"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:6
+msgid ""
+"In this chapter, we introduce advanced commands to modify the way Coq parses "
+"and prints objects, i.e. the translations between the concrete and internal "
+"representations of terms and commands."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:10
+msgid ""
+"The main commands to provide custom symbolic notations for terms are :cmd:"
+"`Notation` and :cmd:`Infix`; they will be described in the :ref:`next "
+"section <Notations>`. There is also a variant of :cmd:`Notation` which does "
+"not modify the parser; this provides a form of :ref:`abbreviation "
+"<Abbreviations>`. It is sometimes expected that the same symbolic notation "
+"has different meanings in different contexts; to achieve this form of "
+"overloading, |Coq| offers a notion of :ref:`interpretation scopes <Scopes>`. "
+"The main command to provide custom notations for tactics is :cmd:`Tactic "
+"Notation`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:27
+msgid "Notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:30
+msgid "Basic notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:34
+msgid ""
+"A *notation* is a symbolic expression denoting some term or term pattern."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:37
+msgid ""
+"A typical notation is the use of the infix symbol ``/\\`` to denote the "
+"logical conjunction (and). Such a notation is declared by"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:44
+msgid ""
+"The expression :g:`(and A B)` is the abbreviated term and the string :g:`"
+"\"A /\\ B\"` (called a *notation*) tells how it is symbolically written."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:47
+msgid ""
+"A notation is always surrounded by double quotes (except when the "
+"abbreviation has the form of an ordinary applicative expression; see :ref:"
+"`Abbreviations`). The notation is composed of *tokens* separated by spaces. "
+"Identifiers in the string (such as ``A`` and ``B``) are the *parameters* of "
+"the notation. Each of them must occur at least once in the denoted term. The "
+"other elements of the string (such as ``/\\``) are the *symbols*."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:54
+msgid ""
+"An identifier can be used as a symbol but it must be surrounded by single "
+"quotes to avoid the confusion with a parameter. Similarly, every symbol of "
+"at least 3 characters and starting with a simple quote must be quoted (then "
+"it starts by two single quotes). Here is an example."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:64
+msgid ""
+"A notation binds a syntactic expression to a term. Unless the parser and "
+"pretty-printer of Coq already know how to deal with the syntactic expression "
+"(see :ref:`ReservingNotations`), explicit precedences and associativity "
+"rules have to be given."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:71
+msgid ""
+"The right-hand side of a notation is interpreted at the time the notation is "
+"given. In particular, disambiguation of constants, :ref:`implicit arguments "
+"<ImplicitArguments>`, :ref:`coercions <Coercions>`, etc. are resolved at the "
+"time of the declaration of the notation."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:77
+msgid "Precedences and associativity"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:79
+msgid ""
+"Mixing different symbolic notations in the same text may cause serious "
+"parsing ambiguity. To deal with the ambiguity of notations, Coq uses "
+"precedence levels ranging from 0 to 100 (plus one extra level numbered 200) "
+"and associativity rules."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:84
+msgid "Consider for example the new notation"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:90
+msgid ""
+"Clearly, an expression such as :g:`forall A:Prop, True /\\ A \\/ A \\/ "
+"False` is ambiguous. To tell the Coq parser how to interpret the expression, "
+"a priority between the symbols ``/\\`` and ``\\/`` has to be given. Assume "
+"for instance that we want conjunction to bind more than disjunction. This is "
+"expressed by assigning a precedence level to each notation, knowing that a "
+"lower level binds more than a higher level. Hence the level for disjunction "
+"must be higher than the level for conjunction."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:99
+msgid ""
+"Since connectives are not tight articulation points of a text, it is "
+"reasonable to choose levels not so far from the highest level which is 100, "
+"for example 85 for disjunction and 80 for conjunction [#and_or_levels]_."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:103
+msgid ""
+"Similarly, an associativity is needed to decide whether :g:`True /\\ False /"
+"\\ False` defaults to :g:`True /\\ (False /\\ False)` (right associativity) "
+"or to :g:`(True /\\ False) /\\ False` (left associativity). We may even "
+"consider that the expression is not well-formed and that parentheses are "
+"mandatory (this is a “no associativity”) [#no_associativity]_. We do not "
+"know of a special convention of the associativity of disjunction and "
+"conjunction, so let us apply for instance a right associativity (which is "
+"the choice of Coq)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:111
+msgid ""
+"Precedence levels and associativity rules of notations have to be given "
+"between parentheses in a list of modifiers that the :cmd:`Notation` command "
+"understands. Here is how the previous examples refine."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:120
+msgid ""
+"By default, a notation is considered nonassociative, but the precedence "
+"level is mandatory (except for special cases whose level is canonical). The "
+"level is either a number or the phrase ``next level`` whose meaning is "
+"obvious. Some :ref:`associativities are predefined <init-notations>` in the "
+"``Notations`` module."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:130
+msgid "Complex notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:132
+msgid ""
+"Notations can be made from arbitrarily complex symbols. One can for instance "
+"define prefix notations."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:139
+msgid ""
+"One can also define notations for incomplete terms, with the hole expected "
+"to be inferred during type checking."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:146
+msgid ""
+"One can define *closed* notations whose both sides are symbols. In this "
+"case, the default precedence level for the inner subexpression is 200, and "
+"the default level for the notation itself is 0."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:154
+msgid "One can also define notations for binders."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:160
+msgid ""
+"In the last case though, there is a conflict with the notation for type "
+"casts. The notation for types casts, as shown by the command :cmd:`Print "
+"Grammar constr` is at level 100. To avoid ``x : A`` being parsed as a type "
+"cast, it is necessary to put ``x`` at a level below 100, typically 99. "
+"Hence, a correct definition is the following:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:170
+msgid ""
+"More generally, it is required that notations are explicitly factorized on "
+"the left. See the next section for more about factorization."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:174
+msgid "Simple factorization rules"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:176
+msgid ""
+"Coq extensible parsing is performed by *Camlp5* which is essentially a LL1 "
+"parser: it decides which notation to parse by looking at tokens from left to "
+"right. Hence, some care has to be taken not to hide already existing rules "
+"by new rules. Some simple left factorization work has to be done. Here is an "
+"example."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:186
+msgid ""
+"In order to factorize the left part of the rules, the subexpression referred "
+"to by ``y`` has to be at the same level in both rules. However the default "
+"behavior puts ``y`` at the next level below 70 in the first rule (``no "
+"associativity`` is the default), and at level 200 in the second rule "
+"(``level 200`` is the default for inner expressions). To fix this, we need "
+"to force the parsing level of ``y``, as follows."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:198
+msgid ""
+"For the sake of factorization with Coq predefined rules, simple rules have "
+"to be observed for notations starting with a symbol, e.g., rules starting "
+"with “\\ ``{``\\ ” or “\\ ``(``\\ ” should be put at level 0. The list of "
+"Coq predefined notations can be found in the chapter on :ref:`thecoqlibrary`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:205
+msgid "This command displays the current state of the Coq term parser."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:209
+msgid ""
+"This displays the state of the subparser of patterns (the parser used in the "
+"grammar of the match with constructions)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:214
+msgid "Displaying symbolic notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:216
+msgid ""
+"The command :cmd:`Notation` has an effect both on the Coq parser and on the "
+"Coq printer. For example:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:223
+msgid ""
+"However, printing, especially pretty-printing, also requires some care. We "
+"may want specific indentations, line breaks, alignment if on several lines, "
+"etc. For pretty-printing, |Coq| relies on |ocaml| formatting library, which "
+"provides indentation and automatic line breaks depending on page width by "
+"means of *formatting boxes*."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:229
+msgid ""
+"The default printing of notations is rudimentary. For printing a notation, a "
+"formatting box is opened in such a way that if the notation and its "
+"arguments cannot fit on a single line, a line break is inserted before the "
+"symbols of the notation and the arguments on the next lines are aligned with "
+"the argument on the first line."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:235
+msgid ""
+"A first, simple control that a user can have on the printing of a notation "
+"is the insertion of spaces at some places of the notation. This is performed "
+"by adding extra spaces between the symbols and parameters: each extra space "
+"(other than the single space needed to separate the components) is "
+"interpreted as a space to be inserted by the printer. Here is an example "
+"showing how to add spaces around the bar of the notation."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:251
+msgid ""
+"The second, more powerful control on printing is by using the format "
+"modifier. Here is an example"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:267
+msgid ""
+"A *format* is an extension of the string denoting the notation with the "
+"possible following elements delimited by single quotes:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:270
+msgid "extra spaces are translated into simple spaces"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:272
+msgid ""
+"tokens of the form ``'/ '`` are translated into breaking point, in case a "
+"line break occurs, an indentation of the number of spaces after the “ ``/``” "
+"is applied (2 spaces in the given example)"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:276
+msgid "token of the form ``'//'`` force writing on a new line"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:278
+msgid ""
+"well-bracketed pairs of tokens of the form ``'[ '`` and ``']'`` are "
+"translated into printing boxes; in case a line break occurs, an extra "
+"indentation of the number of spaces given after the “ ``[``” is applied (4 "
+"spaces in the example)"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:283
+msgid ""
+"well-bracketed pairs of tokens of the form ``'[hv '`` and ``']'`` are "
+"translated into horizontal-or-else-vertical printing boxes; if the content "
+"of the box does not fit on a single line, then every breaking point forces a "
+"newline and an extra indentation of the number of spaces given after the “ "
+"``[``” is applied at the beginning of each newline (3 spaces in the example)"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:290
+msgid ""
+"well-bracketed pairs of tokens of the form ``'[v '`` and ``']'`` are "
+"translated into vertical printing boxes; every breaking point forces a "
+"newline, even if the line is large enough to display the whole content of "
+"the box, and an extra indentation of the number of spaces given after the "
+"“``[``” is applied at the beginning of each newline"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:296
+msgid ""
+"Notations disappear when a section is closed. No typing of the denoted "
+"expression is performed at definition time. Type checking is done only at "
+"the time of use of the notation."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:300
+msgid ""
+"Sometimes, a notation is expected only for the parser. To do so, the option "
+"``only parsing`` is allowed in the list of modifiers of :cmd:`Notation`. "
+"Conversely, the ``only printing`` modifier can be used to declare that a "
+"notation should only be used for printing and should not declare a parsing "
+"rule. In particular, such notations do not modify the parser."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:308
+msgid "The Infix command"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:310
+msgid ""
+"The :cmd:`Infix` command is a shortening for declaring notations of infix "
+"symbols."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:315
+msgid "This command is equivalent to"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:317
+msgid ":n:`Notation \"x @symbol y\" := (@term x y) ({+, @modifier}).`"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:319
+msgid "where ``x`` and ``y`` are fresh names. Here is an example."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:328
+msgid "Reserving notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:330
+msgid ""
+"A given notation may be used in different contexts. Coq expects all uses of "
+"the notation to be defined at the same precedence and with the same "
+"associativity. To avoid giving the precedence and associativity every time, "
+"it is possible to declare a parsing rule in advance without giving its "
+"interpretation. Here is an example from the initial state of Coq."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:341
+msgid ""
+"Reserving a notation is also useful for simultaneously defining an inductive "
+"type or a recursive constant and a notation for it."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:344
+msgid ""
+"The notations mentioned in the module :ref:`init-notations` are reserved. "
+"Hence their precedence and associativity cannot be changed."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:348
+msgid "Simultaneous definition of terms and notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:350
+msgid ""
+"Thanks to reserved notations, the inductive, co-inductive, record, recursive "
+"and corecursive definitions can benefit from customized notations. To do "
+"this, insert a ``where`` notation clause after the definition of the "
+"(co)inductive type or (co)recursive term (or after the definition of each of "
+"them in case of mutual definitions). The exact syntax is given by :token:"
+"`decl_notation` for inductive, co-inductive, recursive and corecursive "
+"definitions and in :ref:`record-types` for records. Here are examples:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:377
+msgid "Displaying information about notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:381
+msgid ""
+"Controls whether to use notations for printing terms wherever possible. "
+"Default is on."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:386
+msgid ":flag:`Printing All`"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:387
+msgid "To disable other elements in addition to notations."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:392
+msgid "Locating notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:394
+msgid ""
+"To know to which notations a given symbol belongs to, use the :cmd:`Locate` "
+"command. You can call it on any (composite) symbol surrounded by double "
+"quotes. To locate a particular notation, use a string where the variables of "
+"the notation are replaced by “``_``” and where possible single quotes "
+"inserted around identifiers or tokens starting with a single quote are "
+"dropped."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:406
+msgid "Notations and binders"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:408
+msgid ""
+"Notations can include binders. This section lists different ways to deal "
+"with binders. For further examples, see also :ref:"
+"`RecursiveNotationsWithBinders`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:413
+msgid "Binders bound in the notation and parsed as identifiers"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:415
+msgid "Here is the basic example of a notation using a binder:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:422
+msgid ""
+"The binding variables in the right-hand side that occur as a parameter of "
+"the notation (here :g:`x`) dynamically bind all the occurrences in their "
+"respective binding scope after instantiation of the parameters of the "
+"notation. This means that the term bound to :g:`B` can refer to the variable "
+"name bound to :g:`x` as shown in the following application of the notation:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:433
+msgid ""
+"Notice the modifier ``x ident`` in the declaration of the notation. It tells "
+"to parse :g:`x` as a single identifier."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:437
+msgid "Binders bound in the notation and parsed as patterns"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:439
+msgid ""
+"In the same way as patterns can be used as binders, as in :g:`fun '(x,y) => x"
+"+y` or :g:`fun '(existT _ x _) => x`, notations can be defined so that any :"
+"n:`@pattern` can be used in place of the binder. Here is an example:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:453
+msgid ""
+"The modifier ``p pattern`` in the declaration of the notation tells to "
+"parse :g:`p` as a pattern. Note that a single variable is both an identifier "
+"and a pattern, so, e.g., the following also works:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:461
+msgid ""
+"If one wants to prevent such a notation to be used for printing when the "
+"pattern is reduced to a single identifier, one has to use instead the "
+"modifier ``p strict pattern``. For parsing, however, a ``strict pattern`` "
+"will continue to include the case of a variable. Here is an example showing "
+"the difference:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:478
+msgid ""
+"The default level for a ``pattern`` is 0. One can use a different level by "
+"using ``pattern at level`` :math:`n` where the scale is the same as the one "
+"for terms (see :ref:`init-notations`)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:483
+msgid "Binders bound in the notation and parsed as terms"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:485
+msgid ""
+"Sometimes, for the sake of factorization of rules, a binder has to be parsed "
+"as a term. This is typically the case for a notation such as the following:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:494
+msgid ""
+"This is so because the grammar also contains rules starting with :g:`{}` and "
+"followed by a term, such as the rule for the notation :g:`{ A } + { B }` for "
+"the constant :g:`sumbool` (see :ref:`specification`)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:498
+msgid ""
+"Then, in the rule, ``x ident`` is replaced by ``x at level 99 as ident`` "
+"meaning that ``x`` is parsed as a term at level 99 (as done in the notation "
+"for :g:`sumbool`), but that this term has actually to be an identifier."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:502
+msgid ""
+"The notation :g:`{ x | P }` is already defined in the standard library with "
+"the ``as ident`` modifier. We cannot redefine it but one can define an "
+"alternative notation, say :g:`{ p such that P }`, using instead ``as "
+"pattern``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:512
+msgid "Then, the following works:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:518
+msgid ""
+"To enforce that the pattern should not be used for printing when it is just "
+"an identifier, one could have said ``p at level 99 as strict pattern``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:522
+msgid ""
+"Note also that in the absence of a ``as ident``, ``as strict pattern`` or "
+"``as pattern`` modifiers, the default is to consider subexpressions "
+"occurring in binding position and parsed as terms to be ``as ident``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:529
+msgid "Binders not bound in the notation"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:531
+msgid ""
+"We can also have binders in the right-hand side of a notation which are not "
+"themselves bound in the notation. In this case, the binders are considered "
+"up to renaming of the internal binder. E.g., for the notation"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:540
+msgid "the next command fails because p does not bind in the instance of n."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:554
+msgid "Notations with recursive patterns"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:556
+msgid ""
+"A mechanism is provided for declaring elementary notations with recursive "
+"patterns. The basic example is:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:563
+msgid ""
+"On the right-hand side, an extra construction of the form ``.. t ..`` can be "
+"used. Notice that ``..`` is part of the Coq syntax and it must not be "
+"confused with the three-dots notation “``…``” used in this manual to denote "
+"a sequence of arbitrary size."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:568
+msgid ""
+"On the left-hand side, the part “``x s .. s y``” of the notation parses any "
+"number of times (but at least once) a sequence of expressions separated by "
+"the sequence of tokens ``s`` (in the example, ``s`` is just “``;``”)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:572
+msgid ""
+"The right-hand side must contain a subterm of the form either ``φ(x, .. φ(y,"
+"t) ..)`` or ``φ(y, .. φ(x,t) ..)`` where :math:`φ([~]_E , [~]_I)`, called "
+"the *iterator* of the recursive notation is an arbitrary expression with "
+"distinguished placeholders and where :math:`t` is called the *terminating "
+"expression* of the recursive notation. In the example, we choose the names :"
+"math:`x` and :math:`y` but in practice they can of course be chosen "
+"arbitrarily. Note that the placeholder :math:`[~]_I` has to occur only once "
+"but :math:`[~]_E` can occur several times."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:581
+msgid ""
+"Parsing the notation produces a list of expressions which are used to fill "
+"the first placeholder of the iterating pattern which itself is repeatedly "
+"nested as many times as the length of the list, the second placeholder being "
+"the nesting point. In the innermost occurrence of the nested iterating "
+"pattern, the second placeholder is finally filled with the terminating "
+"expression."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:588
+msgid ""
+"In the example above, the iterator :math:`φ([~]_E , [~]_I)` is :math:`cons "
+"[~]_E [~]_I` and the terminating expression is ``nil``. Here are other "
+"examples:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:600
+msgid ""
+"Notations with recursive patterns can be reserved like standard notations, "
+"they can also be declared within :ref:`interpretation scopes <Scopes>`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:607
+msgid "Notations with recursive patterns involving binders"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:609
+msgid ""
+"Recursive notations can also be used with binders. The basic example is:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:618
+msgid ""
+"The principle is the same as in :ref:`RecursiveNotations` except that in the "
+"iterator :math:`φ([~]_E , [~]_I)`, the placeholder :math:`[~]_E` can also "
+"occur in position of the binding variable of a ``fun`` or a ``forall``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:623
+msgid ""
+"To specify that the part “``x .. y``” of the notation parses a sequence of "
+"binders, ``x`` and ``y`` must be marked as ``binder`` in the list of "
+"modifiers of the notation. The binders of the parsed sequence are used to "
+"fill the occurrences of the first placeholder of the iterating pattern which "
+"is repeatedly nested as many times as the number of binders generated. If "
+"ever the generalization operator ``'`` (see :ref:`implicit-generalization`) "
+"is used in the binding list, the added binders are taken into account too."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:631
+msgid ""
+"There are two flavors of binder parsing. If ``x`` and ``y`` are marked as "
+"binder, then a sequence such as :g:`a b c : T` will be accepted and "
+"interpreted as the sequence of binders :g:`(a:T) (b:T) (c:T)`. For instance, "
+"in the notation above, the syntax :g:`exists a b : nat, a = b` is valid."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:636
+msgid ""
+"The variables ``x`` and ``y`` can also be marked as closed binder in which "
+"case only well-bracketed binders of the form :g:`(a b c:T)` or :g:`{a b c:T}"
+"` etc. are accepted."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:640
+msgid ""
+"With closed binders, the recursive sequence in the left-hand side can be of "
+"the more general form ``x s .. s y`` where ``s`` is an arbitrary sequence of "
+"tokens. With open binders though, ``s`` has to be empty. Here is an example "
+"of recursive notation with closed binders:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:651
+msgid ""
+"A recursive pattern for binders can be used in position of a recursive "
+"pattern for terms. Here is an example:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:660
+msgid ""
+"If an occurrence of the :math:`[~]_E` is not in position of a binding "
+"variable but of a term, it is the name used in the binding which is used. "
+"Here is an example:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:671
+msgid "Predefined entries"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:673
+msgid ""
+"By default, sub-expressions are parsed as terms and the corresponding "
+"grammar entry is called :n:`@constr`. However, one may sometimes want to "
+"restrict the syntax of terms in a notation. For instance, the following "
+"notation will accept to parse only global reference in position of :g:`x`:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:684
+msgid ""
+"In addition to ``global``, one can restrict the syntax of a sub-expression "
+"by using the entry names ``ident`` or ``pattern`` already seen in :ref:"
+"`NotationsWithBinders`, even when the corresponding expression is not used "
+"as a binder in the right-hand side. E.g.:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:696
+msgid "Summary"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:701
+msgid "Syntax of notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:703
+msgid ""
+"The different syntactic variants of the command Notation are given on the "
+"following figure. The optional :production:`scope` is described in :ref:"
+"`Scopes`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:735
+msgid ""
+"No typing of the denoted expression is performed at definition time. Type "
+"checking is done only at the time of use of the notation."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:738
+msgid ""
+"Many examples of Notation may be found in the files composing the initial "
+"state of Coq (see directory :file:`$COQLIB/theories/Init`)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:741
+msgid ""
+"The notation ``\"{ x }\"`` has a special status in such a way that complex "
+"notations of the form ``\"x + { y }\"`` or ``\"x * { y }\"`` can be nested "
+"with correct precedences. Especially, every notation involving a pattern of "
+"the form ``\"{ x }\"`` is parsed as a notation where the pattern ``"
+"\"{ x }\"`` has been simply replaced by ``\"x\"`` and the curly brackets are "
+"parsed separately. E.g. ``\"y + { z }\"`` is not parsed as a term of the "
+"given form but as a term of the form ``\"y + z\"`` where ``z`` has been "
+"parsed using the rule parsing ``\"{ x }\"``. Especially, level and "
+"precedences for a rule including patterns of the form ``\"{ x }\"`` are "
+"relative not to the textual notation but to the notation where the curly "
+"brackets have been removed (e.g. the level and the associativity given to "
+"some notation, say ``\"{ y } & { z }\"`` in fact applies to the underlying ``"
+"\"{ x }\"``\\-free rule which is ``\"y & z\"``)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:756
+msgid "Persistence of notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:758
+msgid "Notations disappear when a section is closed."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:762
+msgid ""
+"Notations survive modules unless the command ``Local Notation`` is used "
+"instead of :cmd:`Notation`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:768
+msgid "Interpretation scopes"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:770
+msgid ""
+"An *interpretation scope* is a set of notations for terms with their "
+"interpretations. Interpretation scopes provide a weak, purely syntactical "
+"form of notation overloading: the same notation, for instance the infix "
+"symbol ``+``, can be used to denote distinct definitions of the additive "
+"operator. Depending on which interpretation scopes are currently open, the "
+"interpretation is different. Interpretation scopes can include an "
+"interpretation for numerals and strings. However, this is only made possible "
+"at the Objective Caml level."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:780
+msgid ""
+"See :ref:`above <NotationSyntax>` for the syntax of notations including the "
+"possibility to declare them in a given scope. Here is a typical example "
+"which declares the notation for conjunction in the scope ``type_scope``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:788
+msgid "A notation not defined in a scope is called a *lonely* notation."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:792
+msgid "Global interpretation rules for notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:794
+msgid ""
+"At any time, the interpretation of a notation for a term is done within a "
+"*stack* of interpretation scopes and lonely notations. In case a notation "
+"has several interpretations, the actual interpretation is the one defined by "
+"(or in) the more recently declared (or opened) lonely notation (or "
+"interpretation scope) which defines this notation. Typically if a given "
+"notation is defined in some scope ``scope`` but has also an interpretation "
+"not assigned to a scope, then, if ``scope`` is open before the lonely "
+"interpretation is declared, then the lonely interpretation is used (and this "
+"is the case even if the interpretation of the notation in scope is given "
+"after the lonely interpretation: otherwise said, only the order of lonely "
+"interpretations and opening of scopes matters, and not the declaration of "
+"interpretations within a scope)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:808
+msgid ""
+"The initial state of Coq declares three interpretation scopes and no lonely "
+"notations. These scopes, in opening order, are ``core_scope``, "
+"``type_scope`` and ``nat_scope``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:814
+msgid ""
+"The command to add a scope to the interpretation scope stack is :n:`Open "
+"Scope @scope`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:819
+msgid ""
+"It is also possible to remove a scope from the interpretation scope stack by "
+"using the command :n:`Close Scope @scope`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:822
+msgid ""
+"Notice that this command does not only cancel the last :n:`Open Scope "
+"@scope` but all its invocations."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:825
+msgid ""
+"``Open Scope`` and ``Close Scope`` do not survive the end of sections where "
+"they occur. When defined outside of a section, they are exported to the "
+"modules that import the module where they occur."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:832
+msgid ""
+"These variants are not exported to the modules that import the module where "
+"they occur, even if outside a section."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:838
+msgid ""
+"These variants survive sections. They behave as if Global were absent when "
+"not inside a section."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:844
+msgid "Local interpretation rules for notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:846
+msgid ""
+"In addition to the global rules of interpretation of notations, some ways to "
+"change the interpretation of subterms are available."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:850
+msgid "Local opening of an interpretation scope"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:852
+msgid ""
+"It is possible to locally extend the interpretation scope stack using the "
+"syntax :g:`(term)%key` (or simply :g:`term%key` for atomic terms), where key "
+"is a special identifier called *delimiting key* and bound to a given scope."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:856
+msgid ""
+"In such a situation, the term term, and all its subterms, are interpreted in "
+"the scope stack extended with the scope bound tokey."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:861
+msgid ""
+"To bind a delimiting key to a scope, use the command :n:`Delimit Scope "
+"@scope with @ident`"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:866
+msgid ""
+"To remove a delimiting key of a scope, use the command :n:`Undelimit Scope "
+"@scope`"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:870
+msgid "Binding arguments of a constant to an interpretation scope"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:875
+msgid ""
+"It is possible to set in advance that some arguments of a given constant "
+"have to be interpreted in a given scope. The command is :n:`Arguments "
+"@qualid {+ @name%@scope}` where the list is a prefix of the arguments of "
+"``qualid`` eventually annotated with their ``scope``. Grouping round "
+"parentheses can be used to decorate multiple arguments with the same scope. "
+"``scope`` can be either a scope name or its delimiting key. For example the "
+"following command puts the first two arguments of :g:`plus_fct` in the scope "
+"delimited by the key ``F`` (``Rfun_scope``) and the last argument in the "
+"scope delimited by the key ``R`` (``R_scope``)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:889
+msgid ""
+"The ``Arguments`` command accepts scopes decoration to all grouping "
+"parentheses. In the following example arguments A and B are marked as "
+"maximally inserted implicit arguments and are put into the type_scope scope."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:897
+msgid ""
+"When interpreting a term, if some of the arguments of qualid are built from "
+"a notation, then this notation is interpreted in the scope stack extended by "
+"the scope bound (if any) to this argument. The effect of the scope is "
+"limited to the argument itself. It does not propagate to subterms but the "
+"subterms that, after interpretation of the notation, turn to be themselves "
+"arguments of a reference are interpreted accordingly to the argument scopes "
+"bound to this reference."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:907
+msgid "This command can be used to clear argument scopes of :token:`qualid`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:911
+msgid ""
+"Defines extra argument scopes, to be used in case of coercion to "
+"``Funclass`` (see the :ref:`implicitcoercions` chapter) or with a computed "
+"type."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:916
+msgid ""
+"This behaves like :n:`Arguments qualid {+ @name%@scope}` but survives when a "
+"section is closed instead of stopping working at section closing. Without "
+"the ``Global`` modifier, the effect of the command stops when the section it "
+"belongs to ends."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:923
+msgid ""
+"This behaves like :n:`Arguments @qualid {+ @name%@scope}` but does not "
+"survive modules and files. Without the ``Local`` modifier, the effect of the "
+"command is visible from within other modules or files."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:929
+msgid ""
+"The command :cmd:`About` can be used to show the scopes bound to the "
+"arguments of a function."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:934
+msgid ""
+"In notations, the subterms matching the identifiers of the notations are "
+"interpreted in the scope in which the identifiers occurred at the time of "
+"the declaration of the notation. Here is an example:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:954
+msgid "Binding types of arguments to an interpretation scope"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:958
+msgid ""
+"When an interpretation scope is naturally associated to a type (e.g.  the "
+"scope of operations on the natural numbers), it may be convenient to bind it "
+"to this type. When a scope ``scope`` is bound to a type ``type``, any new "
+"function defined later on gets its arguments of type ``type`` interpreted by "
+"default in scope scope (this default behavior can however be overwritten by "
+"explicitly using the command :cmd:`Arguments`)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:965
+msgid ""
+"Whether the argument of a function has some type ``type`` is determined "
+"statically. For instance, if ``f`` is a polymorphic function of type :g:"
+"`forall X:Type, X -> X` and type :g:`t` is bound to a scope ``scope``, then :"
+"g:`a` of type :g:`t` in :g:`f t a` is not recognized as an argument to be "
+"interpreted in scope ``scope``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:971
+msgid ""
+"More generally, any coercion :n:`@class` (see the :ref:`implicitcoercions` "
+"chapter) can be bound to an interpretation scope. The command to do it is :n:"
+"`Bind Scope @scope with @class`"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:990
+msgid ""
+"The scopes ``type_scope`` and ``function_scope`` also have a local effect on "
+"interpretation. See the next section."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:994
+msgid "The ``type_scope`` interpretation scope"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:998
+msgid ""
+"The scope ``type_scope`` has a special status. It is a primitive "
+"interpretation scope which is temporarily activated each time a subterm of "
+"an expression is expected to be a type. It is delimited by the key ``type``, "
+"and bound to the coercion class ``Sortclass``. It is also used in certain "
+"situations where an expression is statically known to be a type, including "
+"the conclusion and the type of hypotheses within an Ltac goal match (see :"
+"ref:`ltac-match-goal`), the statement of a theorem, the type of a "
+"definition, the type of a binder, the domain and codomain of implication, "
+"the codomain of products, and more generally any type argument of a declared "
+"or defined constant."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1010
+msgid "The ``function_scope`` interpretation scope"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1014
+msgid ""
+"The scope ``function_scope`` also has a special status. It is temporarily "
+"activated each time the argument of a global reference is recognized to be a "
+"``Funclass`` istance, i.e., of type :g:`forall x:A, B` or :g:`A -> B`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1021
+msgid "Interpretation scopes used in the standard library of Coq"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1023
+msgid ""
+"We give an overview of the scopes used in the standard library of Coq. For a "
+"complete list of notations in each scope, use the commands :cmd:`Print "
+"Scopes` or :cmd:`Print Scope`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1030
+msgid "``type_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1028
+msgid ""
+"This scope includes infix * for product types and infix + for sum types. It "
+"is delimited by the key ``type``, and bound to the coercion class "
+"``Sortclass``, as described above."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1034
+msgid "``function_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1033
+msgid ""
+"This scope is delimited by the key ``function``, and bound to the coercion "
+"class ``Funclass``, as described above."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1040
+msgid "``nat_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1037
+msgid ""
+"This scope includes the standard arithmetical operators and relations on "
+"type nat. Positive numerals in this scope are mapped to their canonical "
+"representent built from :g:`O` and :g:`S`. The scope is delimited by the key "
+"``nat``, and bound to the type :g:`nat` (see above)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1045
+msgid "``N_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1043
+msgid ""
+"This scope includes the standard arithmetical operators and relations on "
+"type :g:`N` (binary natural numbers). It is delimited by the key ``N`` and "
+"comes with an interpretation for numerals as closed terms of type :g:`N`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1050
+msgid "``Z_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1048
+msgid ""
+"This scope includes the standard arithmetical operators and relations on "
+"type :g:`Z` (binary integer numbers). It is delimited by the key ``Z`` and "
+"comes with an interpretation for numerals as closed terms of type :g:`Z`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1056
+msgid "``positive_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1053
+msgid ""
+"This scope includes the standard arithmetical operators and relations on "
+"type :g:`positive` (binary strictly positive numbers). It is delimited by "
+"key ``positive`` and comes with an interpretation for numerals as closed "
+"terms of type :g:`positive`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1064
+msgid "``Q_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1059
+msgid ""
+"This scope includes the standard arithmetical operators and relations on "
+"type :g:`Q` (rational numbers defined as fractions of an integer and a "
+"strictly positive integer modulo the equality of the numerator- denominator "
+"cross-product). As for numerals, only 0 and 1 have an interpretation in "
+"scope ``Q_scope`` (their interpretations are 0/1 and 1/1 respectively)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1069
+msgid "``Qc_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1067
+msgid ""
+"This scope includes the standard arithmetical operators and relations on the "
+"type :g:`Qc` of rational numbers defined as the type of irreducible "
+"fractions of an integer and a strictly positive integer."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1075
+msgid "``real_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1072
+msgid ""
+"This scope includes the standard arithmetical operators and relations on "
+"type :g:`R` (axiomatic real numbers). It is delimited by the key ``R`` and "
+"comes with an interpretation for numerals using the :g:`IZR` morphism from "
+"binary integer numbers to :g:`R`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1079
+msgid "``bool_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1078
+msgid ""
+"This scope includes notations for the boolean operators. It is delimited by "
+"the key ``bool``, and bound to the type :g:`bool` (see above)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1083
+msgid "``list_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1082
+msgid ""
+"This scope includes notations for the list operators. It is delimited by the "
+"key ``list``, and bound to the type :g:`list` (see above)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1086
+msgid "``core_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1086
+msgid ""
+"This scope includes the notation for pairs. It is delimited by the key "
+"``core``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1094
+msgid "``string_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1089
+msgid ""
+"This scope includes notation for strings as elements of the type string. "
+"Special characters and escaping follow Coq conventions on strings (see :ref:"
+"`lexical-conventions`). Especially, there is no convention to visualize non "
+"printable characters of a string. The file :file:`String.v` shows an example "
+"that contains quotes, a newline and a beep (i.e. the ASCII character of code "
+"7)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1103
+msgid "``char_scope``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1097
+msgid ""
+"This scope includes interpretation for all strings of the form ``\"c\"`` "
+"where :g:`c` is an ASCII character, or of the form ``\"nnn\"`` where nnn is "
+"a three-digits number (possibly with leading 0's), or of the form ``"
+"\"\"\"\"``. Their respective denotations are the ASCII code of :g:`c`, the "
+"decimal ASCII code ``nnn``, or the ascii code of the character ``\"`` (i.e. "
+"the ASCII code 34), all of them being represented in the type :g:`ascii`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1106
+msgid "Displaying information about scopes"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1110
+msgid ""
+"This displays the current stack of notations in scopes and lonely notations "
+"that is used to interpret a notation. The top of the stack is displayed "
+"last. Notations in scopes whose interpretation is hidden by the same "
+"notation in a more recently opened scope are not displayed. Hence each "
+"notation is displayed only once."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1118
+msgid ""
+"This displays the current stack of notations in scopes and lonely notations "
+"assuming that :token:`scope` is pushed on top of the stack. This is useful "
+"to know how a subterm locally occurring in the scope :token:`scope` is "
+"interpreted."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1125
+msgid ""
+"This displays all the notations, delimiting keys and corresponding classes "
+"of all the existing interpretation scopes. It also displays the lonely "
+"notations."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1132
+msgid ""
+"This displays all the notations defined in the interpretation scope :token:"
+"`scope`. It also displays the delimiting key if any and the class to which "
+"the scope is bound, if any."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1139
+msgid "Abbreviations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1143
+msgid ""
+"An *abbreviation* is a name, possibly applied to arguments, that denotes a "
+"(presumably) more complex expression. Here are examples:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1169
+msgid ""
+"An abbreviation expects no precedence nor associativity, since it is parsed "
+"as an usual application. Abbreviations are used as much as possible by the "
+"Coq printers unless the modifier ``(only parsing)`` is given."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1174
+msgid ""
+"An abbreviation is bound to an absolute name as an ordinary definition is "
+"and it also can be referred to by a qualified name."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1177
+msgid ""
+"Abbreviations are syntactic in the sense that they are bound to expressions "
+"which are not typed at the time of the definition of the abbreviation but at "
+"the time they are used. Especially, abbreviations can be bound to terms with "
+"holes (i.e. with “``_``”). For example:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1199
+msgid ""
+"Abbreviations disappear when a section is closed. No typing of the denoted "
+"expression is performed at definition time. Type checking is done only at "
+"the time of use of the abbreviation."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1206
+msgid "Tactic Notations"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1208
+msgid ""
+"Tactic notations allow to customize the syntax of tactics. They have the "
+"following syntax:"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1224
+msgid ""
+"A tactic notation extends the parser and pretty-printer of tactics with a "
+"new rule made of the list of production items. It then evaluates into the "
+"tactic expression ``tactic``. For simple tactics, it is recommended to use a "
+"terminal symbol, i.e. a string, for the first production item. The tactic "
+"level indicates the parsing precedence of the tactic notation. This "
+"information is particularly relevant for notations of tacticals. Levels 0 to "
+"5 are available (default is 5)."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1234
+msgid ""
+"To know the parsing precedences of the existing tacticals, use the command "
+"``Print Grammar tactic``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1237
+msgid ""
+"Each type of tactic argument has a specific semantic regarding how it is "
+"parsed and how it is interpreted. The semantic is described in the following "
+"table. The last command gives examples of tactics which use the "
+"corresponding kind of argument."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1245
+msgid "Tactic argument type"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1246
+msgid "parsed as"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1247
+msgid "interpreted as"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1248
+msgid "as in tactic"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1250
+msgid "``ident``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1251
+#: ../../user-extensions/syntax-extensions.rst:1261
+msgid "identifier"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1252
+msgid "a user-given name"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1253
+msgid "intro"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1255
+msgid "``simple_intropattern``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1256
+msgid "intro_pattern"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1257
+msgid "an intro pattern"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1258
+msgid "intros"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1260
+msgid "``hyp``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1262
+msgid "a hypothesis defined in context"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1263
+msgid "clear"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1265
+msgid "``reference``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1266
+msgid "qualified identifier"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1267
+msgid "a global reference of term"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1268
+msgid "unfold"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1270
+msgid "``constr``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1271
+#: ../../user-extensions/syntax-extensions.rst:1276
+msgid "term"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1272
+msgid "a term"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1273
+msgid "exact"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1275
+msgid "``uconstr``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1277
+msgid "an untyped term"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1278
+msgid "refine"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1280
+msgid "``integer``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1281
+msgid "integer"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1282
+#: ../../user-extensions/syntax-extensions.rst:1287
+msgid "an integer"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1285
+msgid "``int_or_var``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1286
+msgid "identifier or integer"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1288
+msgid "do"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1290
+msgid "``tactic``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1291
+msgid "tactic at level 5"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1292
+#: ../../user-extensions/syntax-extensions.rst:1297
+msgid "a tactic"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1295
+msgid "``tacticn``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1296
+msgid "tactic at level n"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1300
+msgid "*entry*\\ ``_list``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1301
+msgid "list of *entry*"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1302
+#: ../../user-extensions/syntax-extensions.rst:1307
+msgid "a list of how *entry* is interpreted"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1305
+msgid "``ne_``\\ *entry*\\ ``_list``"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1306
+msgid "non-empty list of *entry*"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1310
+msgid ""
+"In order to be bound in tactic definitions, each syntactic entry for "
+"argument type must include the case of a simple |Ltac| identifier as part of "
+"what it parses. This is naturally the case for ``ident``, "
+"``simple_intropattern``, ``reference``, ``constr``, ... but not for "
+"``integer``. This is the reason for introducing a special entry "
+"``int_or_var`` which evaluates to integers only but which syntactically "
+"includes identifiers in order to be usable in tactic definitions."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1318
+msgid ""
+"The *entry*\\ ``_list`` and ``ne_``\\ *entry*\\ ``_list`` entries can be "
+"used in primitive tactics or in other notations at places where a list of "
+"the underlying entry can be used: entry is either ``constr``, ``hyp``, "
+"``integer`` or ``int_or_var``."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1325
+msgid ""
+"Tactic notations disappear when a section is closed. They survive when a "
+"module is closed unless the command ``Local Tactic Notation`` is used "
+"instead of :cmd:`Tactic Notation`."
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1330
+msgid "Footnotes"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1331
+msgid ""
+"which are the levels effectively chosen in the current implementation of Coq"
+msgstr ""
+
+#: ../../user-extensions/syntax-extensions.rst:1334
+msgid ""
+"Coq accepts notations declared as nonassociative but the parser on which Coq "
+"is built, namely Camlp5, currently does not implement ``no associativity`` "
+"and replaces it with ``left associativity``; hence it is the same for Coq: "
+"``no associativity`` is in fact ``left associativity`` for the purposes of "
+"parsing"
+msgstr ""
