@@ -7,3 +7,16 @@ tactic	タクティック	Coqの証明を記述するためのコマンド。
 develop	構築	証明に対して用いる。
 develop	開発	プログラムに対して用いる。
 user	ユーザ
+index	索引
+documentation	文書	使われ方を見るに「記述」みたいな言い方でも良さそうな気がする
+part	部	マニュアルの構造を示す場合
+chapter	章
+theorem	定理
+proof	証明
+proof engine	証明エンジン
+evaluation	評価
+induction principle	帰納法の原理
+batch mode	コンパイルモード
+recursive type	再帰型
+Addendum	付録
+vernacular	Vernacular	国内では常に大文字始まりにしているのでそれに従う。
