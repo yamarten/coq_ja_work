@@ -6,6 +6,46 @@
 <!-- Default translations -->
     <tu>
       <tuv lang="EN-US">
+        <seg>:ref:`thecoqcommands`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145020Z" creationid="yamarten" creationdate="20181104T145020Z">
+        <seg>:ref:`thecoqcommands`.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A commented version of sources of the |Coq| standard library (including only the specifications, the proofs are removed) is available at https://coq.inria.fr/stdlib/.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150204Z" creationid="yamarten" creationdate="20181104T150204Z">
+        <seg>|Coq| 標準ライブラリのコメント付きソースコード (仕様のみで、証明を省いたもの)は https://coq.inria.fr/stdlib/ で閲覧できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A companion volume to this reference manual, the |Coq| Tutorial, is aimed at gently introducing new users to developing proofs in |Coq| without assuming prior knowledge of type theory.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145957Z" creationid="yamarten" creationdate="20181104T145957Z">
+        <seg>このマニュアルと対を成す |Coq| チュートリアルは、新規ユーザが型理論の知識なしに |Coq| で証明を構築できるようになるまで、優しく導入することを目的としています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A text file `INSTALL` that comes with the sources explains how to install |Coq|.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150123Z" creationid="yamarten" creationdate="20181104T150123Z">
+        <seg>ソースに付属するテキストファイル `INSTALL` では、 |Coq| をインストールする方法について説明しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Addendum</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150239Z" creationid="yamarten" creationdate="20181104T150239Z">
+        <seg>付録</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All logical judgments in |Coq| are typing judgments.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T101610Z" creationid="yamarten" creationdate="20181007T100201Z">
@@ -16,8 +56,49 @@
       <tuv lang="EN-US">
         <seg>All services of the |Coq| proof assistant are accessible by interpretation of a command language called *the vernacular*.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamarten" changedate="20181007T112922Z" creationid="yamarten" creationdate="20181007T112922Z">
-        <seg>|Coq| が提供する全てのサービスは、 *vernacular* と呼ばれるコマンド言語を読み込ませることで利用できます。</seg>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144825Z" creationid="yamarten" creationdate="20181007T112922Z">
+        <seg>|Coq| が提供する全てのサービスは、 *Vernacular* と呼ばれるコマンド言語を読み込ませることで利用できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Chapters :ref:`gallinaspecificationlanguage` and :ref:`extensionsofgallina` describe the concrete syntax as well as the meaning of programs, theorems and proofs in the Calculus of Inductive Constructions.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145106Z" creationid="yamarten" creationdate="20181104T145106Z">
+        <seg>:ref:`gallinaspecificationlanguage` および :ref:`extensionsofgallina` の章では、構文および Calculus of Inductive Constructions におけるプログラムや証明・定理の意味について説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Chapter :ref:`calculusofinductiveconstructions` is a mathematical description of the formalism.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145128Z" creationid="yamarten" creationdate="20181104T145128Z">
+        <seg>:ref:`calculusofinductiveconstructions` の章は数学の形式的な説明です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Chapter :ref:`thecoqlibrary` describes the standard library of |Coq|.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145114Z" creationid="yamarten" creationdate="20181104T145114Z">
+        <seg>:ref:`thecoqlibrary` の章では |Coq| の標準ライブラリについて説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Chapter :ref:`themodulesystem` describes the module system.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145130Z" creationid="yamarten" creationdate="20181104T145130Z">
+        <seg>:ref:`themodulesystem` の章ではモジュールシステムについて説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>"requests to the environment"が指すものがわかっていない。環境ってどの辺りなんだろう。宣言とかの話なのか、Setみたいなより広い話を含んでいるのか。</note>
+      <tuv lang="EN-US">
+        <seg>Chapter :ref:`vernacularcommands` presents all commands (we call them *vernacular commands*) that are not directly related to interactive proving: requests to the environment, complete or partial evaluation, loading and compiling files.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145429Z" creationid="yamarten" creationdate="20181104T145429Z">
+        <seg>:ref:`vernacularcommands` の章では、対話的証明と直接的には関係のないコマンド (*Vernacular コマンド*) を全て挙げます。コマンドは、環境への要求、完全/部分的な評価、ファイルの読み込みやコンパイルなどを行います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -32,10 +113,100 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Examples of tactics are described in Chapter :ref:`detailedexamplesoftactics`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145621Z" creationid="yamarten" creationdate="20181104T145621Z">
+        <seg>タクティックの具体例は :ref:`detailedexamplesoftactics` の章で説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Finally, Chapter :ref:`coqintegrateddevelopmentenvironment` describes CoqIDE.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145816Z" creationid="yamarten" creationdate="20181104T145816Z">
+        <seg>最後に、 :ref:`coqintegrateddevelopmentenvironment` の章で、 CoqIDE について説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Finally, the |SSR| proof language is presented in Chapter :ref:`thessreflectprooflanguage`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145630Z" creationid="yamarten" creationdate="20181104T145630Z">
+        <seg>最後に、証明言語 |SSR| について :ref:`thessreflectprooflanguage` の章で説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>compile mode じゃなかったのかよ。</note>
+      <tuv lang="EN-US">
+        <seg>First in Chapter :ref:`thecoqcommands`, the usage of `coqc` (batch mode) and `coqtop` (interactive mode) with their options is described.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145714Z" creationid="yamarten" creationdate="20181104T145714Z">
+        <seg>まず、 :ref:`thecoqcommands` の章で、`coqc` (コンパイルモード) と `coqtop` (対話モード) の使い方およびオプションについて説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>How to read this book</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144922Z" creationid="yamarten" creationdate="20181104T144922Z">
+        <seg>この文書の読み方</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>How to start and stop proofs, do multiple proofs in parallel is explained in Chapter :ref:`proofhandling`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145435Z" creationid="yamarten" creationdate="20181104T145435Z">
+        <seg>どのように証明を始め、終わればいいのか、どうすれば証明を並行して進めることができるかは、 :ref:`proofhandling` の章で説明しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In Chapter :ref:`tactics`, all commands that realize one or more steps of the proof are presented: we call them *tactics*.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145557Z" creationid="yamarten" creationdate="20181104T145557Z">
+        <seg>:ref:`tactics` の章では、証明の1つまたは複数のステップを成すコマンド (*タクティック*) を全て挙げます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>とっくの昔に消えているような気がする。</note>
+      <tuv lang="EN-US">
+        <seg>In a second step, the user can read also the tutorial on recursive types (document `RecTutorial.ps`).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150007Z" creationid="yamarten" creationdate="20181104T150007Z">
+        <seg>その後は、再帰型についてのチュートリアル (`RecTutorial.ps`) を読むのもいいでしょう。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In interactive mode, users can develop their theories and proofs step by step, and query the system for available theorems and definitions.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T122200Z" creationid="yamarten" creationdate="20181007T122200Z">
         <seg>対話モードでは、ユーザは順を追って証明を構築したり、利用できる定理や定義をシステムに問い合わせたりできます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the fourth part more practical tools are documented.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145717Z" creationid="yamarten" creationdate="20181104T145650Z">
+        <seg>第4部はより実用的なツールについて文書化しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Indexes</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150216Z" creationid="yamarten" creationdate="20181104T150216Z">
+        <seg>索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Installation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150013Z" creationid="yamarten" creationdate="20181104T150013Z">
+        <seg>インストール方法</seg>
       </tuv>
     </tu>
     <tu>
@@ -48,6 +219,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is divided in six chapters.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145403Z" creationid="yamarten" creationdate="20181104T145403Z">
+        <seg>ここは6つの章に分かれています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It provides a specification language named |Gallina|.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T080633Z" creationid="yamarten" creationdate="20181007T080342Z">
@@ -56,10 +235,74 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>License</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150242Z" creationid="yamarten" creationdate="20181104T150242Z">
+        <seg>ライセンス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Links to several tutorials can be found at https://coq.inria.fr/documentation and https://github.com/coq/coq/wiki#coq-tutorials</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T035722Z" creationid="yamarten" creationdate="20181007T035722Z">
         <seg>https://coq.inria.fr/documentation や https://github.com/coq/coq/wiki#coq-tutorials には、幾つかのチュートリアルへのリンクがあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>List of additional documentation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145841Z" creationid="yamarten" creationdate="20181104T145841Z">
+        <seg>その他の文書一覧</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Moreover, |Coq|’s compiler provides an output file containing a compact representation of its input.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144902Z" creationid="yamarten" creationdate="20181104T144902Z">
+        <seg>さらに、 |Coq| コンパイラは、入力のコンパクトな表現を持つ出力ファイルを生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Nonetheless, the manual has some structure that is explained below.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145002Z" creationid="yamarten" creationdate="20181104T145002Z">
+        <seg>とはいえ、このマニュアルも以下のような構造を持っています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Optionally, you can enhance it with the minor mode Company-Coq :cite:`Pit16` (see https://github.com/cpitclaudel/company-coq).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150319Z" creationid="yamarten" creationdate="20181104T150319Z">
+        <seg>また、マイナーモード Company-Coq :cite:`Pit16` (https://github.com/cpitclaudel/company-coq) で拡張することもできます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Options A and B are not elected.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150310Z" creationid="yamarten" creationdate="20181104T150310Z">
+        <seg>オプションAおよびBは選択しない。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Practical tools</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150232Z" creationid="yamarten" creationdate="20181104T150232Z">
+        <seg>実用ツール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Preamble</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150219Z" creationid="yamarten" creationdate="20181104T150219Z">
+        <seg>はじめに</seg>
       </tuv>
     </tu>
     <tu>
@@ -119,6 +362,30 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>Proof-General is available at https://proofgeneral.github.io/.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150315Z" creationid="yamarten" creationdate="20181104T150315Z">
+        <seg>Proof-General は https://proofgeneral.github.io/から入手可能です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See the table of contents for a complete list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145836Z" creationid="yamarten" creationdate="20181104T145836Z">
+        <seg>全ての項目を知りたい場合は、目次を参照してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Table of contents</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150213Z" creationid="yamarten" creationdate="20181104T150213Z">
+        <seg>目次</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>as well asのニュアンスを落としてるので、「仕様記述言語のはずでは？」となりそうな気もする</note>
       <tuv lang="EN-US">
         <seg>Terms of |Gallina| can represent programs as well as properties of these programs and proofs of these properties.</seg>
@@ -131,16 +398,88 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       <tuv lang="EN-US">
         <seg>The `coqtop` read-eval-print-loop can also be used directly, for debugging purposes.</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamarten" changedate="20181104T111736Z" creationid="yamarten" creationdate="20181104T111736Z">
-        <seg>デバッグのために `coqtop`</seg>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144829Z" creationid="yamarten" creationdate="20181104T111736Z">
+        <seg>デバッグのために、 read-eval-print-loop である `coqtop` を直接用いることもできます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The compiled mode acts as a proof checker taking a file containing a whole development in order to ensure its correctness.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144849Z" creationid="yamarten" creationdate="20181104T144849Z">
+        <seg>コンパイルモードは、開発したもの全てを受け取り、その正当性を保証する証明チェッカとして機能します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The compiled mode is run with the `coqc` command.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144910Z" creationid="yamarten" creationdate="20181104T144910Z">
+        <seg>コンパイルモードは `coqc` コマンドで実行されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The fifth part documents a number of advanced features, including coercions, canonical structures, typeclasses, program extraction, and specialized solvers and tactics.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145822Z" creationid="yamarten" creationdate="20181104T145822Z">
+        <seg>第5部では、型強制・正準構造・型クラス・プログラム抽出・特殊なソルバとタクティックといった、いくつかの高度な機能について説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The first part describes the specification language, |Gallina|.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145011Z" creationid="yamarten" creationdate="20181104T145011Z">
+        <seg>第1部では、仕様記述言語 |Gallina| について説明します。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>The interactive mode is generally run with the help of an IDE, such as CoqIDE, documented in :ref:`coqintegrateddevelopmentenvironment`, Emacs with Proof-General :cite:`Asp00` [#PG]_, or jsCoq to run Coq in your browser (see https://github.com/ejgallego/jscoq).</seg>
       </tuv>
-      <tuv lang="JA" changeid="yamarten" changedate="20181104T111758Z" creationid="yamarten" creationdate="20181104T111701Z">
-        <seg>対話モードは一般的に, CoqIDE (:ref:`coqintegrateddevelopmentenvironment` にて記載)やProof-General :cite: `Asp00` [#PG] を入れた Emacs 、またはブラウザ上で動作する jsCoq (see https://github.com/ejgallego/jscoq) のようなIDEの助けを借りて実行されます。</seg>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144551Z" creationid="yamarten" creationdate="20181104T111701Z">
+        <seg>対話モードは一般的に, CoqIDE (:ref:`coqintegrateddevelopmentenvironment` にて記載)やProof-General :cite:`Asp00` [#PG] を入れた Emacs 、またはブラウザ上で動作する jsCoq (see https://github.com/ejgallego/jscoq) のようなIDEの助けを借りて実行されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The language</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150221Z" creationid="yamarten" creationdate="20181104T150221Z">
+        <seg>言語</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The language to combine these tactics into complex proof strategies is given in Chapter :ref:`ltac`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145611Z" creationid="yamarten" creationdate="20181104T145611Z">
+        <seg>これらのタクティックを組み合わせて複雑な証明戦略を作るための言語については :ref:`ltac` の章で述べています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The proof engine</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150224Z" creationid="yamarten" creationdate="20181104T150224Z">
+        <seg>証明エンジン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The second part describes the proof engine.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145355Z" creationid="yamarten" creationdate="20181104T145355Z">
+        <seg>第2部では、証明エンジンについて説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The third part describes how to extend the syntax of |Coq| in Chapter :ref:`syntaxextensionsandinterpretationscopes` and how to define new induction principles in Chapter :ref:`proofschemes`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145639Z" creationid="yamarten" creationdate="20181104T145639Z">
+        <seg>第3部は、 :ref:`syntaxextensionsandinterpretationscopes` の章で|Coq| の構文の拡張方法を、 :ref:`proofschemes` の章で帰納法の原理を新たに定義する方法を説明しています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -154,10 +493,36 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The |Coq| standard library</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150201Z" creationid="yamarten" creationdate="20181104T150201Z">
+        <seg>|Coq| 標準ライブラリ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The |Coq| system is designed to develop mathematical proofs, and especially to write formal specifications, programs and to verify that programs are correct with respect to their specifications.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T040420Z" creationid="yamarten" creationdate="20181007T035904Z">
         <seg>|Coq| は、数学的な証明を構築するためにデザインされました。特に、形式仕様やプログラムを記述したり、プログラムが仕様に沿っていることを検証することを目的としています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>distributionのいい感じの訳語が欲しい。</note>
+      <tuv lang="EN-US">
+        <seg>Then, in Chapter :ref:`utilities`, various utilities that come with the |Coq| distribution are presented.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145806Z" creationid="yamarten" creationdate="20181104T145806Z">
+        <seg>次に、 :ref:`utilities` の章で、 |Coq| ディストリビューションに付属する様々なユーティリティについて説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>オプション(Setするやつ)についての索引は無視？</note>
+      <tuv lang="EN-US">
+        <seg>There is a global index, and a number of specific indexes for tactics, vernacular commands, and error messages and warnings.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144950Z" creationid="yamarten" creationdate="20181104T144950Z">
+        <seg>総合索引に加え、タクティックやコマンド、エラーメッセージ・警告に特化した索引があります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -170,6 +535,31 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is a Reference Manual, so it is not intended for continuous reading.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144930Z" creationid="yamarten" creationdate="20181104T144930Z">
+        <seg>この文書はリファレンスマニュアルであり、通読するものではありません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>documentとdocumentationが区別できてないせいでちょっとよろしくない感じになっている。</note>
+      <tuv lang="EN-US">
+        <seg>This manual does not contain all the documentation the user may need about |Coq|.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145934Z" creationid="yamarten" creationdate="20181104T145918Z">
+        <seg>このマニュアルは |Coq| についてユーザが求める文書が全て含まれているわけではありません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This material (the Coq Reference Manual) may be distributed only subject to the terms and conditions set forth in the Open Publication License, v1.0 or later (the latest version is presently available at http://www.opencontent.org/openpub).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150301Z" creationid="yamarten" creationdate="20181104T150301Z">
+        <seg>この作品 (Coq リファレンスマニュアル) はオープン・パブリケーション利用許諾契約書 (v1.0 かそれ以降) で指定された条件と制約に従う限り配布することができる(契約書の最新の版は現在のところ http://www.opencontent.org/openpub/で入手可能である)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To start using Coq, it is advised to first read a tutorial.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T034900Z" creationid="yamarten" creationdate="20181007T034900Z">
@@ -178,10 +568,42 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Tutorial</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145951Z" creationid="yamarten" creationdate="20181104T145951Z">
+        <seg>チュートリアル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>User extensions</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T150228Z" creationid="yamarten" creationdate="20181104T150228Z">
+        <seg>ユーザ拡張</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Using the so-called *Curry-Howard isomorphism*, programs, properties and proofs are formalized in the same language called *Calculus of Inductive Constructions*, that is a :math:`\lambda`-calculus with a rich type system.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T094032Z" creationid="yamarten" creationdate="20181007T082717Z">
         <seg>*カリー・ハワード同型対応* を使えば、プログラム・性質・証明は全て *Calculus of Inductive Constructions* という一つの言語で表現できます。これは :math:`\lambda` 計算にリッチな型システムが付いたものです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Various informations can be found in the following documents:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T145944Z" creationid="yamarten" creationdate="20181104T145944Z">
+        <seg>以下の文書からも様々な情報を得ることができます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We recommend using the various indexes to quickly locate the documentation you are looking for.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T144937Z" creationid="yamarten" creationdate="20181104T144937Z">
+        <seg>目的の文書を素早く見つけるために、色々な索引を使うことをお勧めします。</seg>
       </tuv>
     </tu>
     <tu>
