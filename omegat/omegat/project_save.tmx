@@ -1,9 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tmx SYSTEM "tmx11.dtd">
 <tmx version="1.1">
-  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.6.0_9_r10313" segtype="sentence" srclang="EN-US"/>
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.6.0_10_r10436" segtype="sentence" srclang="EN-US"/>
   <body>
 <!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>All logical judgments in |Coq| are typing judgments.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T101610Z" creationid="yamarten" creationdate="20181007T100201Z">
+        <seg>|Coq| における論理的判断は全て型付け判断です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>All services of the |Coq| proof assistant are accessible by interpretation of a command language called *the vernacular*.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T112922Z" creationid="yamarten" creationdate="20181007T112922Z">
+        <seg>|Coq| が提供する全てのサービスは、 *vernacular* と呼ばれるコマンド言語を読み込ませることで利用できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>唐突に「Coq」から外れる縦棒。どうも付けるとsmallcapクラスが付くっぽいのだけど、スモールキャピタルにはなっているわけでもなく、特に意味は無さそう。
+</note>
+      <tuv lang="EN-US">
+        <seg>Coq has an interactive mode in which commands are interpreted as the user types them in from the keyboard and a compiled mode where commands are processed from a file.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T114048Z" creationid="yamarten" creationdate="20181007T113510Z">
+        <seg>Coq には、ユーザが入力した端からコマンドを実行していく対話モードと、ファイルに書かれたコマンドを順に実行していくコンパイルモードがあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In interactive mode, users can develop their theories and proofs step by step, and query the system for available theorems and definitions.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T122200Z" creationid="yamarten" creationdate="20181007T122200Z">
+        <seg>対話モードでは、ユーザは順を追って証明を構築したり、利用できる定理や定義をシステムに問い合わせたりできます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Introduction</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T034937Z" creationid="yamarten" creationdate="20181007T033312Z">
+        <seg>はじめに</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It provides a specification language named |Gallina|.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T080633Z" creationid="yamarten" creationdate="20181007T080342Z">
+        <seg>Coqは、 |Gallina| と呼ばれる仕様記述言語を提供します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Links to several tutorials can be found at https://coq.inria.fr/documentation and https://github.com/coq/coq/wiki#coq-tutorials</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T035722Z" creationid="yamarten" creationdate="20181007T035722Z">
+        <seg>https://coq.inria.fr/documentation や https://github.com/coq/coq/wiki#coq-tutorials には、幾つかのチュートリアルへのリンクがあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Project-Id-Version: Coq 8.8.2
+Report-Msgid-Bugs-To:
+POT-Creation-Date: 2018-10-07 10:53+0900
+PO-Revision-Date: 2018-10-07 10:53+0900
+Last-Translator: Automatically generated
+Language-Team: none
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Language: ja
+Plural-Forms: nplurals=1; plural=0;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T035013Z" creationid="yamarten" creationdate="20181007T035013Z">
+        <seg>Project-Id-Version: Coq 8.8.2
+Report-Msgid-Bugs-To:
+POT-Creation-Date: 2018-10-07 10:53+0900
+PO-Revision-Date: 2018-10-07 10:53+0900
+Last-Translator: Automatically generated
+Language-Team: none
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Language: ja
+Plural-Forms: nplurals=1; plural=0;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Project-Id-Version: Coq 8.8.2
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2018-10-07 10:53+0900
+PO-Revision-Date: 2018-10-07 10:53+0900
+Last-Translator: Automatically generated
+Language-Team: none
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Language: ja
+Plural-Forms: nplurals=1; plural=0;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T035446Z" creationid="yamarten" creationdate="20181007T035446Z">
+        <seg>Project-Id-Version: Coq 8.8.2
+Report-Msgid-Bugs-To: 
+POT-Creation-Date: 2018-10-07 10:53+0900
+PO-Revision-Date: 2018-10-07 10:53+0900
+Last-Translator: Automatically generated
+Language-Team: none
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Language: ja
+Plural-Forms: nplurals=1; plural=0;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>as well asのニュアンスを落としてるので、「仕様記述言語のはずでは？」となりそうな気もする</note>
+      <tuv lang="EN-US">
+        <seg>Terms of |Gallina| can represent programs as well as properties of these programs and proofs of these properties.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T081041Z" creationid="yamarten" creationdate="20181007T081041Z">
+        <seg>|Gallina| の項はプログラム・プログラムの性質・性質の証明を表現できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>「compiles to its specification」ってなんだ。</note>
+      <tuv lang="EN-US">
+        <seg>The very heart of the |Coq| system is the type checking algorithm that checks the correctness of proofs, in other words that checks that a program complies to its specification.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T102409Z" creationid="yamarten" creationdate="20181007T101423Z">
+        <seg>|Coq| システムの心臓部は型検査アルゴリズムで、これは証明の正しさを検査します。言い換えれば、このアルゴリズムはプログラムがその仕様に準拠するか検査します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The |Coq| system is designed to develop mathematical proofs, and especially to write formal specifications, programs and to verify that programs are correct with respect to their specifications.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T040420Z" creationid="yamarten" creationdate="20181007T035904Z">
+        <seg>|Coq| は、数学的な証明を構築するためにデザインされました。特に、形式仕様やプログラムを記述したり、プログラムが仕様に沿っていることを検証することを目的としています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This document is the Reference Manual of the |Coq| proof assistant.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T034931Z" creationid="yamarten" creationdate="20181007T033738Z">
+        <seg>この文書は証明アシスタント |Coq| のリファレンスマニュアルです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To start using Coq, it is advised to first read a tutorial.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T034900Z" creationid="yamarten" creationdate="20181007T034900Z">
+        <seg>Coqを初めて使う方は、まずチュートリアルを読むことをお勧めします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Using the so-called *Curry-Howard isomorphism*, programs, properties and proofs are formalized in the same language called *Calculus of Inductive Constructions*, that is a :math:`\lambda`-calculus with a rich type system.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T094032Z" creationid="yamarten" creationdate="20181007T082717Z">
+        <seg>*カリー・ハワード同型対応* を使えば、プログラム・性質・証明は全て *Calculus of Inductive Constructions* という一つの言語で表現できます。これは :math:`\lambda` 計算にリッチな型システムが付いたものです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>意図がちゃんとわかってない。「型検査器であり、証明アシスタントでもある」「証明アシスタントではタクティックというものを使う」の2点か？そもそもタクティックを言語と呼ぶのに違和感があるので、先を見てから戻ってきたい。</note>
+      <tuv lang="EN-US">
+        <seg>|Coq| also provides an interactive proof assistant to build proofs using specific programs called *tactics*.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181007T112633Z" creationid="yamarten" creationdate="20181007T101451Z">
+        <seg>また、|Coq| は、 *タクティック* と呼ばれるプログラムを用いて証明を構築する、対話的証明アシスタントも提供します。</seg>
+      </tuv>
+    </tu>
 <!-- Alternative translations -->
   </body>
 </tmx>
