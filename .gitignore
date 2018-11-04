@@ -1,5 +1,5 @@
 .DS_Store
-html/*
+html/refman/*
 target/*
 *.bak
 project_stats.txt
