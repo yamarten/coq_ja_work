@@ -128,6 +128,22 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>The `coqtop` read-eval-print-loop can also be used directly, for debugging purposes.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T111736Z" creationid="yamarten" creationdate="20181104T111736Z">
+        <seg>デバッグのために `coqtop`</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The interactive mode is generally run with the help of an IDE, such as CoqIDE, documented in :ref:`coqintegrateddevelopmentenvironment`, Emacs with Proof-General :cite:`Asp00` [#PG]_, or jsCoq to run Coq in your browser (see https://github.com/ejgallego/jscoq).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181104T111758Z" creationid="yamarten" creationdate="20181104T111701Z">
+        <seg>対話モードは一般的に, CoqIDE (:ref:`coqintegrateddevelopmentenvironment` にて記載)やProof-General :cite: `Asp00` [#PG] を入れた Emacs 、またはブラウザ上で動作する jsCoq (see https://github.com/ejgallego/jscoq) のようなIDEの助けを借りて実行されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>「compiles to its specification」ってなんだ。</note>
       <tuv lang="EN-US">
         <seg>The very heart of the |Coq| system is the type checking algorithm that checks the correctness of proofs, in other words that checks that a program complies to its specification.</seg>
