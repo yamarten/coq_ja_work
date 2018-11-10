@@ -20,3 +20,8 @@ batch mode	コンパイルモード
 recursive type	再帰型
 Addendum	付録
 vernacular	Vernacular	国内では常に大文字始まりにしているのでそれに従う。
+preamble	はじめに
+The language	言語	第一部
+The proof engine	証明エンジン	第二部
+User extensions	ユーザ拡張	第三部
+Practical tools	実用ツール	第四部

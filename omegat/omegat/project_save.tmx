@@ -62,6 +62,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Calculus of Inductive Constructions</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181110T055945Z" creationid="yamarten" creationdate="20181110T055945Z">
+        <seg>Calculus of Inductive Constructions</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Chapters :ref:`gallinaspecificationlanguage` and :ref:`extensionsofgallina` describe the concrete syntax as well as the meaning of programs, theorems and proofs in the Calculus of Inductive Constructions.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145106Z" creationid="yamarten" creationdate="20181104T145106Z">
@@ -396,6 +404,14 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The Gallina specification language</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181110T115315Z" creationid="yamarten" creationdate="20181110T115315Z">
+        <seg>仕様記述言語 Gallina</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The `coqtop` read-eval-print-loop can also be used directly, for debugging purposes.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T144829Z" creationid="yamarten" creationdate="20181104T111736Z">
@@ -432,6 +448,12 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145011Z" creationid="yamarten" creationdate="20181104T145011Z">
         <seg>第1部では、仕様記述言語 |Gallina| について説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>クレジットへのリンクは張らないのか？</note>
+      <tuv lang="EN-US">
+        <seg>The history of this formalism as well as pointers to related work are provided in a separate chapter; see *Credits*.</seg>
       </tuv>
     </tu>
     <tu>
@@ -480,6 +502,14 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145639Z" creationid="yamarten" creationdate="20181104T145639Z">
         <seg>第3部は、 :ref:`syntaxextensionsandinterpretationscopes` の章で|Coq| の構文の拡張方法を、 :ref:`proofschemes` の章で帰納法の原理を新たに定義する方法を説明しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The underlying formal language of |Coq| is a *Calculus of Inductive Constructions* (|Cic|) whose inference rules are presented in this chapter.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181110T110830Z" creationid="yamarten" creationdate="20181110T110830Z">
+        <seg>|Coq| の基礎となる形式言語は *Calculus of Inductive Constructions* (|Cic|) と呼ばれる。この章では、 |Cic| の推論規則について説明する。</seg>
       </tuv>
     </tu>
     <tu>
