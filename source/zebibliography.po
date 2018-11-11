@@ -17,6 +17,6 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../coq-tacindex.rst:7
-msgid "Tactic index"
+#: ../../zebibliography.rst:14
+msgid "Bibliography"
 msgstr ""

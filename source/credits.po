@@ -17,6 +17,10 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: ../../credits.rst:5
+msgid "Credits"
+msgstr ""
+
 #: ../../credits-contents.rst:1
 msgid ""
 "Coq is a proof assistant for higher-order logic, allowing the development of "
