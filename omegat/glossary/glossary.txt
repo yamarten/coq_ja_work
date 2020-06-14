@@ -25,3 +25,47 @@ The language	言語	第一部
 The proof engine	証明エンジン	第二部
 User extensions	ユーザ拡張	第三部
 Practical tools	実用ツール	第四部
+specification language	仕様記述言語
+theory	理論
+axiom	公理
+parameter	パラメータ
+lemma	補題
+object	対象
+syntax	構文
+section	節
+grammar	文法
+notation	記法
+expression	式
+parse	パース
+blank	空白記号
+space	スペース
+identifier	識別子
+literal	リテラル
+entry	エントリ	「非終端記号」と同義と思って差し支えない
+qualifier	修飾子	スコープ修飾子にのみ使われる
+qualified identifier	修飾付き識別子	m.xの形式で書かれた識別子
+quantifier	量化子	全称量化子∀と存在量化子∃の総称
+modifier	指定子	タクティックなどに追加の情報を与える際に用いる要素
+term	項
+type	型
+constant	定数
+remark	注意	訳さない方が伝わるかもしれない
+fact	事実
+variable	変数
+inductive type	帰納型
+sort	ソート	型の型
+proposition	命題
+universe	ユニバース	型の集合的なもの
+binder	束縛子
+bind	束縛
+abstractions	関数抽象
+product	プロダクト	forall x:A, t の形で表される項
+dependent product	依存積
+application	関数適用
+associativity	結合性
+cast	キャスト
+virtual machine	仮想マシン
+subterm	部分項
+let-in definition	let-in定義
+construction	構造	gallinaにおける(部分式を持つ?)構文
+pattern match	パターンマッチ	動詞(pattern match)も名刺(pattern matching)も等しく「パターンマッチ」とする

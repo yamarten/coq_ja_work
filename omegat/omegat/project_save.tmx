@@ -1,15 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tmx SYSTEM "tmx11.dtd">
 <tmx version="1.1">
-  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.6.0_10_r10436" segtype="sentence" srclang="EN-US"/>
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="4.3.2_0_6a661c5e0" segtype="sentence" srclang="EN-US"/>
   <body>
 <!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>*Qualified identifiers* (:token:`qualid`) denote *global constants* (definitions, lemmas, theorems, remarks or facts), *global variables* (parameters or axioms), *inductive types* or *constructors of inductive types*.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T103445Z" creationid="yamarten" creationdate="20200509T103403Z">
+        <seg>*修飾付き識別子* (:token:`qualid`) は *グローバル定数* (定義、補題、定理、注意、事実) や *グローバル変数* (パラメータや公理) 、 *帰納型* 、*帰納型のコンストラクタ* を示します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>*Simple identifiers* (or shortly :token:`ident`) are a syntactic subset of qualified identifiers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T103558Z" creationid="yamarten" creationdate="20200509T103558Z">
+        <seg>*単純識別子* (もしくは単に :token:`ident`) は修飾付き識別子の構文上のサブセットです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>:g:`Prop` is the universe of *logical propositions*.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T112121Z" creationid="yamarten" creationdate="20200509T112121Z">
+        <seg>:g:`Prop` は *論理命題* のユニバースです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>:g:`Set` is is the universe of *program types* or *specifications*.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T153521Z" creationid="yamarten" creationdate="20200509T153521Z">
+        <seg>:g:`Set` は *プログラム型* または *仕様* のユニバースです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>:g:`Type` is the type of :g:`Prop` and :g:`Set`</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T153645Z" creationid="yamarten" creationdate="20200509T153645Z">
+        <seg>:g:`Type` は :g:`Prop` と :g:`Set` の型です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>:n:`@term &lt;: @type` locally sets up the virtual machine for checking that :token:`term` has type :token:`type`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T034035Z" creationid="yamarten" creationdate="20200614T034035Z">
+        <seg>:n:`@term &lt;: @type` は :token:`term` が 型 :token:`type` を持つことを検査するための仮想マシンを局所的に用意します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>:n:`@term &lt;&lt;: @type` uses native compilation for checking that :token:`term` has type :token:`type`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T034638Z" creationid="yamarten" creationdate="20200614T034638Z">
+        <seg>:n:`@term &lt;&lt;: @type` はネイティブコンパイルによって :token:`term` が 型 :token:`type` を持つことを検査します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>:n:`let @ident := @term in @term’` denotes the local binding of :token:`term` to the variable :token:`ident` in :token:`term`’.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T043002Z" creationid="yamarten" creationdate="20200614T043002Z">
+        <seg>:n:`let @ident := @term in @term’` は :token:`term'` 内の変数 :token:`ident` への :token:`term` の束縛を表します。</seg>
+      </tuv>
+    </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>:ref:`thecoqcommands`.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145020Z" creationid="yamarten" creationdate="20181104T145020Z">
         <seg>:ref:`thecoqcommands`.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A binder can also be any pattern prefixed by a quote, e.g. :g:`'(x,y)`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T071250Z" creationid="yamarten" creationdate="20200510T071224Z">
+        <seg>束縛子には引用符を前置した任意のパターンが使えます。 例: :g:`'(x,y)`</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A binding is represented by an identifier.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T043044Z" creationid="yamarten" creationdate="20200510T043044Z">
+        <seg>束縛は識別子を使って表されます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -30,6 +110,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A pattern matching expression is used to analyze the structure of an inductive object and to apply specific treatments accordingly.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T052542Z" creationid="yamarten" creationdate="20200614T052454Z">
+        <seg>パターンマッチ式は、帰納的オブジェクトの構造を分析し、その結果に応じて特定の処理をするために使われます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A text file `INSTALL` that comes with the sources explains how to install |Coq|.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T150123Z" creationid="yamarten" creationdate="20181104T150123Z">
@@ -38,10 +126,43 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>About the grammars in the manual</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T103318Z" creationid="yamarten" creationdate="20181111T103318Z">
+        <seg>このマニュアルにおける文法について</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Abstractions</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T102546Z" creationid="yamarten" creationdate="20200510T102546Z">
+        <seg>関数抽象</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Access identifiers, written :token:`access_ident`, are identifiers prefixed by `.` (dot) without blank.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T145950Z" creationid="yamarten" creationdate="20181111T145950Z">
+        <seg>アクセス識別子 :token:`access_ident` は、識別子の前に間を空けずにドット `.` をつけたものです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Addendum</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T150239Z" creationid="yamarten" creationdate="20181104T150239Z">
         <seg>付録</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>おそらく識別に用いられるの意。</note>
+      <tuv lang="EN-US">
+        <seg>All characters are meaningful.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T114109Z" creationid="yamarten" creationdate="20181111T113921Z">
+        <seg>あらゆる文字が意味を持ちます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -58,6 +179,63 @@
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T144825Z" creationid="yamarten" creationdate="20181007T112922Z">
         <seg>|Coq| が提供する全てのサービスは、 *Vernacular* と呼ばれるコマンド言語を読み込ませることで利用できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An expression enclosed in square brackets ``[…]`` means at most one occurrence of this expression (this corresponds to an optional component).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T133100Z" creationid="yamarten" creationdate="20181111T104237Z">
+        <seg>角括弧で囲まれた式``[…]``は、その式が最大1回出現する(省略可能な要素である)ことを意味します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>プロダクトの話を見るにT-&gt;Propを関数と呼びたくなさそうなので訳として微妙</note>
+      <tuv lang="EN-US">
+        <seg>Applications</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T092610Z" creationid="yamarten" creationdate="20200613T092610Z">
+        <seg>関数適用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As for abstractions, :g:`forall` is followed by a binder list, and products over several variables are equivalent to an iteration of one-variable products.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T084138Z" creationid="yamarten" creationdate="20200613T084138Z">
+        <seg>関数抽象と同様に、 :g:`forall` には束縛子リストが続き、複数変数のプロダクトは1変数プロダクトの繰り返しになります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>At the end, the notation “``[entry sep … sep entry]``” stands for a possibly empty sequence of expressions parsed by the “``entry``” entry, separated by the literal “``sep``”.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T105225Z" creationid="yamarten" creationdate="20181111T105040Z">
+        <seg>最後に、 “``[entry sep … sep entry]``” は、 “``sep``” で区切られた “``entry``” の空であることを許す列を表します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Binders</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T154901Z" creationid="yamarten" creationdate="20200509T154901Z">
+        <seg>束縛子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Blanks</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T105803Z" creationid="yamarten" creationdate="20181111T105730Z">
+        <seg>空白記号</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Blanks are ignored but they separate tokens.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T110030Z" creationid="yamarten" creationdate="20181111T110030Z">
+        <seg>空白記号はトークンの区切りとしてのみ用いられます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -110,6 +288,30 @@
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>Comments</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T110032Z" creationid="yamarten" creationdate="20181111T110032Z">
+        <seg>コメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Comments are treated as blanks.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T110455Z" creationid="yamarten" creationdate="20181111T110455Z">
+        <seg>コメントは空白記号として扱われます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Comments in Coq are enclosed between ``(*`` and ``*)``, and can be nested.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T110139Z" creationid="yamarten" creationdate="20181111T110119Z">
+        <seg>Coqのコメントは ``(*`` と ``*)`` で囲まれた部分で、入れ子にすることもできます。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>唐突に「Coq」から外れる縦棒。どうも付けるとsmallcapクラスが付くっぽいのだけど、スモールキャピタルにはなっているわけでもなく、特に意味は無さそう。
 </note>
       <tuv lang="EN-US">
@@ -121,10 +323,50 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Coq terms are typed.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T100627Z" creationid="yamarten" creationdate="20200509T100617Z">
+        <seg>Coq の項には型が付きます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Coq types are recognized by the same syntactic class as :token:`term`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T101548Z" creationid="yamarten" creationdate="20200509T101429Z">
+        <seg>Coqの型は項と同様に :token:`term` 構文クラスとして認識されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Definition by case analysis</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T051243Z" creationid="yamarten" creationdate="20200614T051243Z">
+        <seg>場合分けによる定義</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Examples of tactics are described in Chapter :ref:`detailedexamplesoftactics`.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145621Z" creationid="yamarten" creationdate="20181104T145621Z">
         <seg>タクティックの具体例は :ref:`detailedexamplesoftactics` の章で説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Expressions often contain redundant pieces of information.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T041136Z" creationid="yamarten" creationdate="20200614T035110Z">
+        <seg>式には冗長な情報片が含まれることがよくあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Extensions of this syntax are given in Chapter :ref:`extensionsofgallina`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T100442Z" creationid="yamarten" creationdate="20200509T100328Z">
+        <seg>この構文の拡張は :ref:`extensionsofgallina` の章にあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -154,6 +396,38 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For instance the expression “fun :token:`ident`\ :math:`_{1}` … :token:`ident`\ :math:`_{n}` : :token:`type` =&gt; :token:`term`” denotes the same function as “ fun :token:`ident`\ :math:`_{1}` : :token:`type` =&gt; … fun :token:`ident`\ :math:`_{n}` : :token:`type` =&gt; :token:`term`”.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T074426Z" creationid="yamarten" creationdate="20200613T074426Z">
+        <seg>例えば “fun :token:`ident`\ :math:`_{1}` … :token:`ident`\ :math:`_{n}` : :token:`type` =&gt; :token:`term`” は “ fun :token:`ident`\ :math:`_{1}` : :token:`type` =&gt; … fun :token:`ident`\ :math:`_{n}` : :token:`type` =&gt; :token:`term`”と同じ関数を表します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Functions over several variables are equivalent to an iteration of one-variable functions.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T074236Z" creationid="yamarten" creationdate="20200613T074236Z">
+        <seg>複数変数の関数は1変数関数の繰り返しと同義です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Grammars are presented in Backus-Naur form (BNF).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T103807Z" creationid="yamarten" creationdate="20181111T103520Z">
+        <seg>文法は Backus-Naur 形式 (BNF) で表されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>How to customize the syntax is described in Chapter :ref:`syntaxextensionsandinterpretationscopes`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T100533Z" creationid="yamarten" creationdate="20200509T100527Z">
+        <seg>構文のカスタマイズ方法については :ref:`syntaxextensionsandinterpretationscopes` の章で説明しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>How to read this book</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T144922Z" creationid="yamarten" creationdate="20181104T144922Z">
@@ -170,10 +444,83 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>However, :token:`string` literals must be correctly closed.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T110410Z" creationid="yamarten" creationdate="20181111T110410Z">
+        <seg>ただし、 :token:`string` リテラルは正しく閉じられねばなりません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>access identifier は「(モジュール等の)内部にアクセスするための識別子」くらいの意味なんだろうけど、世の中的にはaccess modifier(publicとか)の意味でたまに使われることがあるらしく、微妙にややこしい。ここでしか出てこないからいいけど。</note>
+      <tuv lang="EN-US">
+        <seg>Identifiers and access identifiers</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T112746Z" creationid="yamarten" creationdate="20181111T110531Z">
+        <seg>識別子とアクセス識別子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Identifiers may also denote *local variables*, while qualified identifiers do not.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T103750Z" creationid="yamarten" creationdate="20200509T103750Z">
+        <seg>識別子は *ローカル変数* を表すこともありますが、修飾付き識別子がローカル変数を表すことはありません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Identifiers, written :token:`ident`, are sequences of letters, digits, ``_`` and ``'``, that do not start with a digit or ``'``.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T112938Z" creationid="yamarten" creationdate="20181111T112755Z">
+        <seg>識別子 :token:`ident` は、文字・数字・ ``_`` ・ ``'`` の列で、数字および ``'`` で始まらないものです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If a let-binder occurs in the list of binders, it is expanded to a let-in definition (see Section :ref:`let-in`).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T075250Z" creationid="yamarten" creationdate="20200613T075250Z">
+        <seg>束縛子リストの中にlet束縛子があった場合、それはlet-in定義に展開されます。(:ref:`let-in` を参照)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the binding variable is not used in the expression, the identifier can be replaced by the symbol :g:`_`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T043210Z" creationid="yamarten" creationdate="20200510T043210Z">
+        <seg>もし束縛変数をその式で使わないなら、識別子の代わりに :g:`_` を使うこともできます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the variable :token:`ident` occurs in :token:`term`, the product is called *dependent product*.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T085214Z" creationid="yamarten" creationdate="20200613T085214Z">
+        <seg>:token:`ident` が :token:`term` 中に現れる場合、そのプロダクトを *依存積* と呼びます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In Chapter :ref:`tactics`, all commands that realize one or more steps of the proof are presented: we call them *tactics*.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145557Z" creationid="yamarten" creationdate="20181104T145557Z">
         <seg>:ref:`tactics` の章では、証明の1つまたは複数のステップを成すコマンド (*タクティック*) を全て挙げます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In Coq, logical objects are typed to ensure their logical correctness.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T102932Z" creationid="yamarten" creationdate="20181111T102932Z">
+        <seg>Coqにおいて、論理的対象は型付けされることで、その正しさが保証されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In a let-binder, only one variable can be introduced at the same time.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T074909Z" creationid="yamarten" creationdate="20200510T074909Z">
+        <seg>let束縛子では、一度に一つの変数のみ導入できます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -187,10 +534,43 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In addition, there are special notations for regular expressions.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T103827Z" creationid="yamarten" creationdate="20181111T103758Z">
+        <seg>さらに、正規表現のための特殊な記法があります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In grammars, the entry for quoted strings is :production:`string`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190213T142616Z" creationid="yamarten" creationdate="20190213T142616Z">
+        <seg>文法においては、文字列は :production:`string`  というエントリで表します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In interactive mode, users can develop their theories and proofs step by step, and query the system for available theorems and definitions.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T122200Z" creationid="yamarten" creationdate="20181007T122200Z">
         <seg>対話モードでは、ユーザは順を追って証明を構築したり、利用できる定理や定義をシステムに問い合わせたりできます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In particular, identifiers are case-sensitive.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T114152Z" creationid="yamarten" creationdate="20181111T114152Z">
+        <seg>特に、識別子の大文字・小文字は区別されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>funやforallでlet束縛するとletに変換されるため、おそらくそのこと</note>
+      <tuv lang="EN-US">
+        <seg>In the case of :g:`fun` and :g:`forall`, it is intended that at least one binder of the list is an assumption otherwise fun and forall gets identical.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T094157Z" creationid="yamarten" creationdate="20200510T092626Z">
+        <seg>:g:`fun` や :g:`forall` の場合、リストの中で少なくとも1つの束縛子が仮定であることを意図しています。そうでない場合、 fun と forall は同じ意味になります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -211,10 +591,34 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Inferable subterms</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T034943Z" creationid="yamarten" creationdate="20200614T034943Z">
+        <seg>推論可能な部分項</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Initially, numerals are bound to Peano’s representation of natural numbers (see :ref:`datatypes`).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T104435Z" creationid="yamarten" creationdate="20200509T104435Z">
+        <seg>初期状態では、数字列は自然数のペアノ表現に紐づけられています。 (:ref:`datatypes` を参照)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Installation</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T150013Z" creationid="yamarten" creationdate="20181104T150013Z">
         <seg>インストール方法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Integers are numerals optionally preceded by a minus sign.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190213T141914Z" creationid="yamarten" creationdate="20190213T140737Z">
+        <seg>整数は、数字列もしくは数字列の先頭にマイナス記号が付いたものです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -227,6 +631,46 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It allows developing mathematical theories and to prove specifications of programs.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T101002Z" creationid="yamarten" creationdate="20181111T100823Z">
+        <seg>Gallinaは、数学的な理論の構築やプログラムの仕様の証明を可能にします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It denotes a function of the variable :token:`ident` that evaluates to the expression :token:`term` (e.g. :g:`fun x : A =&gt; x` denotes the identity function on type :g:`A`).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T115701Z" creationid="yamarten" creationdate="20200510T115701Z">
+        <seg>これは、変数 :token:`ident`の関数を表し、:token:`term` に評価されます。 (例: :g:`fun x : A =&gt; x` は型 :g:`A` 上の恒等関数を表します)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It denotes either the universal quantification of the variable :g:`x` of type :g:`A` in the proposition :g:`B` or the functional dependent product from :g:`A` to :g:`B` (a construction usually written :math:`\Pi_{x:A}.B` in set theory).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T091443Z" creationid="yamarten" creationdate="20200613T090848Z">
+        <seg>命題 :g:`B` 内の :g:`A` 型の変数 :g:`x` の全称量化と、:g:`A` から :g:`B` への依存関数型(型理論では一般に :math:`\Pi_{x:A}.B` と表記される構造)です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It enforces the type of :token:`term` to be :token:`type`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T023636Z" creationid="yamarten" creationdate="20200614T023636Z">
+        <seg>:token:`term` の型を :token:`type` に強制します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is also possible to give the type of the variable as follows: :n:`(@ident : @type := @term)`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T075641Z" creationid="yamarten" creationdate="20200510T075520Z">
+        <seg>変数の型を与えることもできます: :n:`(@ident : @type := @term)`</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It is divided in six chapters.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145403Z" creationid="yamarten" creationdate="20181104T145403Z">
@@ -235,10 +679,50 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is equivalent to ( … ( :token:`term`\ :math:`_0` :token:`term`\ :math:`_1` ) … ) :token:`term`\ :math:`_n` : associativity is to the left.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T022601Z" creationid="yamarten" creationdate="20200614T022311Z">
+        <seg>これは ( … ( :token:`term`\ :math:`_0` :token:`term`\ :math:`_1` ) … ) :token:`term`\ :math:`_n` と同義で、左結合になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It provides a specification language named |Gallina|.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T080633Z" creationid="yamarten" creationdate="20181007T080342Z">
         <seg>Coqは、 |Gallina| と呼ばれる仕様記述言語を提供します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Keywords</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190213T142620Z" creationid="yamarten" creationdate="20190213T142620Z">
+        <seg>キーワード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Let-in definitions</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T041815Z" creationid="yamarten" creationdate="20200614T041807Z">
+        <seg>let-in定義</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lexical ambiguities are resolved according to the “longest match” rule: when a sequence of non alphanumerical characters can be decomposed into several different ways, then the first token is the longest possible one (among all tokens defined at this moment), and so on.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T095500Z" creationid="yamarten" creationdate="20190217T070020Z">
+        <seg>字句解析時の曖昧性は、「最長一致」の原則に従って解消されます。つまり、英数字以外の文字の並びに複数の解釈がある場合、最初のトークンが(その時に定義されているトークンの中で)可能な限り最長なものになり、以降も同様に選ばれます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lexical conventions</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T105629Z" creationid="yamarten" creationdate="20181111T105629Z">
+        <seg>字句規則</seg>
       </tuv>
     </tu>
     <tu>
@@ -267,6 +751,30 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Lists of :token:`binder` are allowed.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T075739Z" creationid="yamarten" creationdate="20200510T075739Z">
+        <seg>:token:`binder` のリストも使えます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>More on sorts can be found in Section :ref:`sorts`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T153728Z" creationid="yamarten" creationdate="20200509T153728Z">
+        <seg>ソートの詳細については :ref:`sorts` を参照してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Moreover, parentheses can be omitted in the case of a single sequence of bindings sharing the same type (e.g.: :g:`fun (x y z : A) =&gt; t` can be shortened in :g:`fun x y z : A =&gt; t`).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T115707Z" creationid="yamarten" creationdate="20200510T100143Z">
+        <seg>さらに、同じ型を持つ束縛の列一つの場合は括弧を省くことができます。 (例: :g:`fun (x y z : A) =&gt; t` は :g:`fun x y z : A =&gt; t` と略記できます) </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Moreover, |Coq|’s compiler provides an output file containing a compact representation of its input.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T144902Z" creationid="yamarten" creationdate="20181104T144902Z">
@@ -275,10 +783,76 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Natural numbers and integers</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190213T134928Z" creationid="yamarten" creationdate="20190213T134928Z">
+        <seg>自然数と整数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Negative integers are not at the same level as :token:`num`, for this would make precedence unnatural.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T105424Z" creationid="yamarten" creationdate="20200509T105424Z">
+        <seg>負の整数は :token:`num` と同じレベルにはありません。これは、優先順位が不自然になってしまうためです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Non dependent product types have a special notation: :g:`A -&gt; B` stands for :g:`forall _ : A, B`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T091958Z" creationid="yamarten" creationdate="20200613T091719Z">
+        <seg>依存積でないプロダクトは特別な記法 :g:`A -&gt; B` を持ち、 :g:`forall _ : A, B` を意味します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Nonetheless, the manual has some structure that is explained below.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145002Z" creationid="yamarten" creationdate="20181104T145002Z">
         <seg>とはいえ、このマニュアルも以下のような構造を持っています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that :token:`term` is intended to be a type.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T084227Z" creationid="yamarten" creationdate="20200613T084227Z">
+        <seg>:token:`term` は型を意図していることに注意してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Numerals</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T103808Z" creationid="yamarten" creationdate="20200509T103808Z">
+        <seg>数字列</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>digitとnumeralの訳し分けが厳しかったので情報を足した
+おそらく今後はnumeralも「数字」と訳すことがある</note>
+      <tuv lang="EN-US">
+        <seg>Numerals are sequences of digits.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190217T071125Z" creationid="yamarten" creationdate="20190213T140719Z">
+        <seg>数字列はアラビア数字の並びによって表されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Numerals have no definite semantics in the calculus.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T103953Z" creationid="yamarten" creationdate="20200509T103953Z">
+        <seg>数字列は、この計算体系で明確な意味を持ちません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Objects of inductive types can be destructurated by a case-analysis construction called *pattern matching* expression.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T052100Z" creationid="yamarten" creationdate="20200614T051650Z">
+        <seg>帰納型のオブジェクトは *パターンマッチ* 式という場合分け用の構造によって分解できます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -311,6 +885,16 @@
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T150219Z" creationid="yamarten" creationdate="20181104T150219Z">
         <seg>はじめに</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>世に言うproduct type(直積型)ではないことに注意
+</note>
+      <tuv lang="EN-US">
+        <seg>Products</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T083658Z">
+        <seg>プロダクト</seg>
       </tuv>
     </tu>
     <tu>
@@ -379,10 +963,90 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Qualified identifiers and simple identifiers</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T102126Z" creationid="yamarten" creationdate="20200509T102126Z">
+        <seg>修飾付き識別子と単純識別子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See Section :ref:`Mult-match` and Chapter :ref:`extendedpatternmatching` for the description of the general form.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T052828Z" creationid="yamarten" creationdate="20200614T052828Z">
+        <seg>形式全般についての説明は :ref:`Mult-match や ref:`extendedpatternmatching` の章を参照してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>See the table of contents for a complete list.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145836Z" creationid="yamarten" creationdate="20181104T145836Z">
         <seg>全ての項目を知りたい場合は、目次を参照してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Similarly, the notation “``entry … entry``” stands for a non empty sequence of expressions parsed by the “``entry``” entry, without any separator between.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T105029Z" creationid="yamarten" creationdate="20181111T104853Z">
+        <seg>同様に、 “``entry … entry``” は区切り文字を含まない “``entry``” の空でない列を表します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Some constructions allow the binding of a variable to value.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T072521Z" creationid="yamarten" creationdate="20200510T072521Z">
+        <seg>一部の構造では変数を値に束縛できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Space, newline and horizontal tabulation are considered as blanks.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T105924Z" creationid="yamarten" creationdate="20181111T105759Z">
+        <seg>スペース・改行・水平タブは空白記号として見なされます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Special tokens</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190213T142954Z" creationid="yamarten" creationdate="20190213T142954Z">
+        <seg>特殊トークン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Strings</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190213T141921Z" creationid="yamarten" creationdate="20190213T141921Z">
+        <seg>文字列</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Strings are delimited by ``"`` (double quote), and enclose a sequence of any characters different from ``"`` or the sequence ``""`` to denote the double quote character.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190217T070104Z" creationid="yamarten" creationdate="20190213T142519Z">
+        <seg>文字列は、 ``"`` (二重引用符)で囲まれた任意の(``"`` 以外の)任意の文字の並びと、二重引用符の文字を表す ``""`` を指します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Subterms that can be automatically inferred by Coq can be replaced by the symbol ``_`` and Coq will guess the missing piece of information.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T041715Z" creationid="yamarten" creationdate="20200614T041715Z">
+        <seg>Coqが自動推論できる部分項はシンボル ``_`` によって置換することで、Coqが欠けた情報を推測します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Syntax of terms</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T095609Z" creationid="yamarten" creationdate="20200509T095609Z">
+        <seg>項の構文</seg>
       </tuv>
     </tu>
     <tu>
@@ -394,12 +1058,37 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>Terminal symbols are set in black ``typewriter font``.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T103714Z" creationid="yamarten" creationdate="20181111T103645Z">
+        <seg>終端記号には黒い``タイプライタ体``を用います。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>as well asのニュアンスを落としてるので、「仕様記述言語のはずでは？」となりそうな気もする</note>
       <tuv lang="EN-US">
         <seg>Terms of |Gallina| can represent programs as well as properties of these programs and proofs of these properties.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T081041Z" creationid="yamarten" creationdate="20181007T081041Z">
         <seg>|Gallina| の項はプログラム・プログラムの性質・性質の証明を表現できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>字句クラスというのはつまり「ident」とかのこと。http://ocaml.jp/?Genlex でもそう訳されていたし、他に出てこないのでとりあえずいいことにする。</note>
+      <tuv lang="EN-US">
+        <seg>That is, they are recognized by the following lexical class:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T113842Z" creationid="yamarten" creationdate="20181111T113842Z">
+        <seg>つまり、次の字句クラスによって認識されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The *non dependent product* is used both to denote the propositional implication and function types.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T091953Z" creationid="yamarten" creationdate="20200613T091953Z">
+        <seg>*非依存積* は命題の論理包含と関数型を表します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -420,6 +1109,14 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The basic form of pattern matching is characterized by a single :token:`match_item` expression, a :token:`mult_pattern` restricted to a single :token:`pattern` and :token:`pattern` restricted to the form :n:`@qualid {* @ident}`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T053659Z" creationid="yamarten" creationdate="20200614T053659Z">
+        <seg>パターンマッチの基本的な形式は、1つの :token:`match_item` 式、1つの:token:`pattern` 式のみの :token:`match_item` 、そして :n:`@qualid {* @ident}` 形式の :token:`pattern` によって表されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The compiled mode acts as a proof checker taking a file containing a whole development in order to ensure its correctness.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T144849Z" creationid="yamarten" creationdate="20181104T144849Z">
@@ -432,6 +1129,72 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T144910Z" creationid="yamarten" creationdate="20181104T144910Z">
         <seg>コンパイルモードは `coqc` コマンドで実行されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The entry :token:`binder` of the grammar accepts either an assumption binder as defined above or a let-binder.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T074044Z" creationid="yamarten" creationdate="20200510T073948Z">
+        <seg>:token:`binder` エントリは、上で定義した仮定束縛子またはlet束縛子のいずれかになります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>non-exhaustivelyがよくわかっていない。最初は「Unicodeならなんでもというわけではない」(「あ」は有るが「。」は無いとか)くらいの意味かと思ったけど、それだと後ろの方の意味が取れない。例に挙げたもので全てではない、みたいな意味？</note>
+      <tuv lang="EN-US">
+        <seg>The entry ``unicode-letter`` non-exhaustively includes Latin, Greek, Gothic, Cyrillic, Arabic, Hebrew, Georgian, Hangul, Hiragana and Katakana characters, CJK ideographs, mathematical letter-like symbols, hyphens, non-breaking space, … The entry ``unicode-id-part`` non-exhaustively includes symbols for prime letters and subscripts.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T145759Z" creationid="yamarten" creationdate="20181111T142500Z">
+        <seg>``unicode-letter`` エントリには、ラテン文字・ギリシャ文字・ゴート文字・キリル文字・アラビア文字・ヘブライ文字・グルジア文字・ハングル・ひらがな・カタカナ・CJK漢字・数学記号・ハイフン・改行禁止スペースといった文字が非網羅的に含まれます。 ``unicode-id-part`` エントリには、プライム記号や下付き文字などが含まれます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The expression :n:`@term : @type` is a type cast expression.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T023549Z" creationid="yamarten" creationdate="20200614T023549Z">
+        <seg>式 :n:`@term : @type` は型キャスト式です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The expression :n:`forall @ident : @type, @term` denotes the *product* of the variable :token:`ident` of type :token:`type`, over the term :token:`term`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T083945Z" creationid="yamarten" creationdate="20200613T083945Z">
+        <seg>式 :n:`forall @ident : @type, @term` は、 :token:`type`型の変数 :token:`ident` の :token:`term` に関する *プロダクト* を表します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The expression :n:`fun @ident : @type =&gt; @term` defines the *abstraction* of the variable :token:`ident`, of type :token:`type`, over the term :token:`term`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T114433Z" creationid="yamarten" creationdate="20200510T114433Z">
+        <seg>式 :n:`fun @ident : @type =&gt; @term` は、:token:`type` 型の変数 :token:`ident` を持つ *関数抽象* を項 :token:`term` に対して定義します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The expression :token:`term`\ :math:`_0` :token:`term`\ :math:`_1` ... :token:`term`\ :math:`_n` denotes the application of the term :token:`term`\ :math:`_0` to the arguments :token:`term`\ :math:`_1` ... then :token:`term`\ :math:`_n`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T022253Z" creationid="yamarten" creationdate="20200614T022123Z">
+        <seg>式 :token:`term`\ :math:`_0` :token:`term`\ :math:`_1` ... :token:`term`\ :math:`_n` は項 :token:`term`\ :math:`_0` の引数 :token:`term`\ :math:`_1` ... then :token:`term`\ :math:`_n` への関数適用を表します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The expression :token:`term`\ :math:`_0` :token:`term`\ :math:`_1` denotes the application of :token:`term`\ :math:`_0` to :token:`term`\ :math:`_1`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T021828Z" creationid="yamarten" creationdate="20200614T020151Z">
+        <seg>式 :token:`term`\ :math:`_0` :token:`term`\ :math:`_1` は :token:`term`\ :math:`_0` の :token:`term`\ :math:`_1` への関数適用を表します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>原文の引用符の範囲に誤りあり</note>
+      <tuv lang="EN-US">
+        <seg>The expression match ":token:`term`:math:`_0` :token:`return_type` with :token:`pattern`:math:`_1` =&gt; :token:`term`:math:`_1` :math:`|` … :math:`|` :token:`pattern`:math:`_n` =&gt; :token:`term`:math:`_n` end" denotes a *pattern matching* over the term :token:`term`:math:`_0` (expected to be of an inductive type :math:`I`).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T055707Z" creationid="yamarten" creationdate="20200614T053714Z">
+        <seg>式 "match :token:`term`:math:`_0` :token:`return_type` with :token:`pattern`:math:`_1` =&gt; :token:`term`:math:`_1` :math:`|` … :math:`|` :token:`pattern`:math:`_n` =&gt; :token:`term`:math:`_n` end" は、(帰納型 :math:`I` を持つ) :token:`term`:math:`_0` に対する *パターンマッチ* を表します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -451,9 +1214,49 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>The following grammars describe the basic syntax of the terms of the *Calculus of Inductive Constructions* (also called Cic).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T095827Z" creationid="yamarten" creationdate="20200509T095807Z">
+        <seg>次の文法は *Calculus of Inductibe Constructions* (Cic とも呼ばれます)の項の基本的な構文を示しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following identifiers are reserved keywords, and cannot be employed otherwise::</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190213T142907Z" creationid="yamarten" creationdate="20190213T142907Z">
+        <seg>以下の識別子は予約語であり、定められた用途以外に使うことはできません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The following sequences of characters are special tokens::</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190213T143735Z" creationid="yamarten" creationdate="20190213T143735Z">
+        <seg>以下の文字列は特殊なトークンとして扱われます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The formal presentation of Cic is given in Chapter :ref:`calculusofinductiveconstructions`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T100448Z" creationid="yamarten" creationdate="20200509T100259Z">
+        <seg>Cic の形式的な表記は、 :ref:`calculusofinductiveconstructions` の章にあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>クレジットへのリンクは張らないのか？</note>
       <tuv lang="EN-US">
         <seg>The history of this formalism as well as pointers to related work are provided in a separate chapter; see *Credits*.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The intention behind a dependent product :g:`forall x : A, B` is twofold.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T090552Z" creationid="yamarten" creationdate="20200613T090542Z">
+        <seg>依存積 :g:`forall x : A, B` には2つの意図があります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -466,10 +1269,26 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The keyword :g:`fun` can be followed by several binders as given in Section :ref:`binders`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200613T062039Z" creationid="yamarten" creationdate="20200613T062039Z">
+        <seg>キーワード :g:`fun` には :ref:`binders` の節で定めた束縛子を複数続けることができます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The language</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T150221Z" creationid="yamarten" creationdate="20181104T150221Z">
         <seg>言語</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The language of commands, called *The Vernacular* is described in Section :ref:`vernacular`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T102721Z" creationid="yamarten" creationdate="20181111T102721Z">
+        <seg>*Vernacular* と呼ばれるコマンド言語については、 :ref:`vernacular` の節で説明しています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -482,6 +1301,39 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The logical propositions themselves are typing the proofs.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T144420Z" creationid="yamarten" creationdate="20200509T144420Z">
+        <seg>論理命題自体は証明の型になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The notation :n:`(@ident := @term)` for arguments is used for making explicit the value of implicit arguments (see Section :ref:`explicit-applications`).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T023159Z" creationid="yamarten" creationdate="20200614T023159Z">
+        <seg>記法 :n:`(@ident := @term)` は暗黙の引数の値を明示するために使います。 (:ref:`explicit-application` を参照)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The notation in the latter case is :n:`(@ident := @term)`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T074754Z" creationid="yamarten" creationdate="20200510T074754Z">
+        <seg>後者の記法として :n:`(@ident := @term)`があります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>entryはタイプライタ体にしなくていいのだろうか。</note>
+      <tuv lang="EN-US">
+        <seg>The notation “``entry sep … sep entry``” stands for a non empty sequence of expressions parsed by entry and separated by the literal “``sep``” [1]_.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T104632Z" creationid="yamarten" creationdate="20181111T104317Z">
+        <seg>“``entry sep … sep entry``”という記法は、 “``sep``” [1]_ で区切られた、 entry としてパースされる式の、空でない列を表します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The proof engine</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T150224Z" creationid="yamarten" creationdate="20181104T150224Z">
@@ -490,10 +1342,42 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The rules implemented by the typing algorithm are described in Chapter :ref:`calculusofinductiveconstructions`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T100402Z" creationid="yamarten" creationdate="20181111T103139Z">
+        <seg>型付けアルゴリズムで実装されている規則は、 :ref:`calculusofinductiveconstructions` の章で説明しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The second part describes the proof engine.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145355Z" creationid="yamarten" creationdate="20181104T145355Z">
         <seg>第2部では、証明エンジンについて説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The specifications themselves are typing the programs.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T153542Z" creationid="yamarten" creationdate="20200509T153542Z">
+        <seg>仕様はプログラムの型になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The syntax of logical objects involved in theories is described in Section :ref:`term`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T102613Z" creationid="yamarten" creationdate="20181111T102417Z">
+        <seg>理論に関わる論理的な対象についての構文は、 :ref:`term` の節で説明しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The theories are built from axioms, hypotheses, parameters, lemmas, theorems and definitions of constants, functions, predicates and sets.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T102231Z" creationid="yamarten" creationdate="20181111T100837Z">
+        <seg>理論は、公理・仮説・パラメータ・補題・定理と、定数・関数・述語・集合の定義から構築されます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -547,12 +1431,76 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>There are three sorts :g:`Set`, :g:`Prop` and :g:`Type`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T110840Z" creationid="yamarten" creationdate="20200509T110833Z">
+        <seg>型には :g:`Set`、:g:`Prop`、:g:`Type` という3つのソートがあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>オプション(Setするやつ)についての索引は無視？</note>
       <tuv lang="EN-US">
         <seg>There is a global index, and a number of specific indexes for tactics, vernacular commands, and error messages and warnings.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T144950Z" creationid="yamarten" creationdate="20181104T144950Z">
         <seg>総合索引に加え、タクティックやコマンド、エラーメッセージ・警告に特化した索引があります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There is a syntactic sugar for let-in definition of functions: :n:`let @ident {+ @binder} := @term in @term’` stands for :n:`let @ident := fun {+ @binder} =&gt; @term in @term’`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T043910Z" creationid="yamarten" creationdate="20200614T043042Z">
+        <seg>let-in定義には構文糖衣があります。 :n:`let @ident {+ @binder} := @term in @term’` は :n:`let @ident := fun {+ @binder} =&gt; @term in @term’` の省略形です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>There is also a notation for a sequence of binding variables sharing the same type: :n:`({+ @ident} : @type)`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T070558Z" creationid="yamarten" creationdate="20200510T065311Z">
+        <seg>複数の束縛変数に同じ型を持たせるための記法もあります: :n:`({+ @ident} : @type)`</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They are mere notations that can be bound to objects through the notation mechanism (see Chapter :ref:`syntaxextensionsandinterpretationscopes` for details).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T104321Z" creationid="yamarten" creationdate="20200509T104321Z">
+        <seg>単に記法メカニズムによってオブジェクトに紐づけられる表記法です。 (詳細は :ref:`syntaxextensionsandinterpretationscopes` の章を参照)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They are used in the syntax of qualified identifiers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20190213T134918Z" creationid="yamarten" creationdate="20190213T134918Z">
+        <seg>これは修飾付き識別子に使われます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>They can contain any character.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T110153Z" creationid="yamarten" creationdate="20181111T110153Z">
+        <seg>コメントには任意の文字を含めることができます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This chapter describes Gallina, the specification language of Coq.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20181111T100518Z" creationid="yamarten" creationdate="20181111T100420Z">
+        <seg>この章では、Coqの仕様記述言語であるGallinaについて述べます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This constitutes a semantic subclass of the syntactic class :token:`term`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T153405Z" creationid="yamarten" creationdate="20200509T153405Z">
+        <seg>これは、構文クラス :token:`term` のサブクラスを構成します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -569,6 +1517,14 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T144930Z" creationid="yamarten" creationdate="20181104T144930Z">
         <seg>この文書はリファレンスマニュアルであり、通読するものではありません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is called a “let-binder”.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T073136Z" creationid="yamarten" creationdate="20200510T073101Z">
+        <seg>これを "let束縛子" と呼びます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -591,6 +1547,14 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This paragraph describes the basic form of pattern matching.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T052625Z" creationid="yamarten" creationdate="20200614T052625Z">
+        <seg>この段落では、パターンマッチの基本的な形式について説明します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To start using Coq, it is advised to first read a tutorial.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181007T034900Z" creationid="yamarten" creationdate="20181007T034900Z">
@@ -603,6 +1567,22 @@ Plural-Forms: nplurals=1; plural=0;</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145951Z" creationid="yamarten" creationdate="20181104T145951Z">
         <seg>チュートリアル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Type cast</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200614T023502Z" creationid="yamarten" creationdate="20200614T023502Z">
+        <seg>型キャスト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Types</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T100539Z" creationid="yamarten" creationdate="20200509T100539Z">
+        <seg>型</seg>
       </tuv>
     </tu>
     <tu>
@@ -623,6 +1603,14 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Various constructions such as :g:`fun`, :g:`forall`, :g:`fix` and :g:`cofix` *bind* variables.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T042113Z" creationid="yamarten" creationdate="20200509T155450Z">
+        <seg>:g:`fun`、:g:`forall`、:g:`fix`、:g:`cofix` といった様々な構造で変数を *束縛* します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Various informations can be found in the following documents:</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T145944Z" creationid="yamarten" creationdate="20181104T145944Z">
@@ -631,10 +1619,44 @@ Plural-Forms: nplurals=1; plural=0;</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>We denote by :production:`type` the semantic subclass of types inside the syntactic class :token:`term`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T101839Z" creationid="yamarten" creationdate="20200509T101839Z">
+        <seg>以降、構文クラス :token:`term` に含まれる、型を表すサブクラスを :production:`type` と表記します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We denote propositions by :production:`form`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T153151Z" creationid="yamarten" creationdate="20200509T153151Z">
+        <seg>命題は :production:`form` と表記します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We denote specifications by :production:`specif`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200509T153603Z" creationid="yamarten" creationdate="20200509T153603Z">
+        <seg>仕様は :production:`specif` と表記します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>We recommend using the various indexes to quickly locate the documentation you are looking for.</seg>
       </tuv>
       <tuv lang="JA" changeid="yamarten" changedate="20181104T144937Z" creationid="yamarten" creationdate="20181104T144937Z">
         <seg>目的の文書を素早く見つけるために、色々な索引を使うことをお勧めします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>このsynthesizeの意味が正しく取れない(推論とは違う？)のでとりあえず直訳
+binding variableとbound variableは同じ意味で使われてそう</note>
+      <tuv lang="EN-US">
+        <seg>When the type of a bound variable cannot be synthesized by the system, it can be specified with the notation :n:`(@ident : @type)`.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="yamarten" changedate="20200510T065141Z" creationid="yamarten" creationdate="20200510T060035Z">
+        <seg>束縛変数の型がシステムで合成できない場合、 :n:`(@ident : @type)` という記法で指定できます。</seg>
       </tuv>
     </tu>
     <tu>

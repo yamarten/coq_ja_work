@@ -1,14 +1,15 @@
-# Japanese translations for Coq package.
+# Japanese translations for Coq package
+# Coq パッケージに対する英訳.
 # Copyright (C) 1999-2018, Inria
 # This file is distributed under the same license as the Coq package.
-# Automatically generated, 2018.
+# Automatically generated, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Coq 8.8.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-11 17:48+0900\n"
-"PO-Revision-Date: 2018-11-11 17:48+0900\n"
+"POT-Creation-Date: 2019-12-29 17:08+0900\n"
+"PO-Revision-Date: 2019-12-29 17:08+0900\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
